@@ -5,6 +5,7 @@ using UnityEngine;
 public class playercollison : MonoBehaviour
 {
     public GameObject joystick;
+    public GameObject pauseButton;
 
     //health
     public float maxHealth = 100;
@@ -39,13 +40,17 @@ public class playercollison : MonoBehaviour
                //distroy the player
                 Destroy(gameObject);
 
+                //remove pause button
+                pauseButton.SetActive(false);
                 
                 Debug.Log("game over");
 
                 //display game over screen
                 MenuControl.isgameover = true;
+
                 //disable joystick
                 joystick.SetActive(false);
+
                 //stop more enemeis from spawning
                 enemyspawner.spawning = false;
             }
