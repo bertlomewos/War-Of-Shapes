@@ -8,7 +8,7 @@ public class playercollison : MonoBehaviour
     public GameObject pauseButton;
 
     //health
-    public float maxHealth = 100;
+    public float maxHealth;
     public float currentHealth;
 
     public healthBar healthbar;
@@ -19,6 +19,10 @@ public class playercollison : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthbar.setHealth(maxHealth);
+    }
+    private void Update()
+    {
+        healthbar.setHealth(currentHealth);
     }
 
     public void takeDamage()
