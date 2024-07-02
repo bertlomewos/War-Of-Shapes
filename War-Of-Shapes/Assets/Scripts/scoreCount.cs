@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class scoreCount : MonoBehaviour
 {
     public static int scoreValue = 0;
-    private Text score;
+    public Text score;
+    private static int highscore = 0;
     
     // Start is called before the first frame update
     void Start()
-    {
-        score = GetComponent<Text>();
+    { 
+
     }
 
     // Update is called once per frame
@@ -20,6 +21,12 @@ public class scoreCount : MonoBehaviour
         if (score != null)
         {
             score.text = scoreValue.ToString();
+
+            if(scoreValue > highscore) 
+            {
+                highscore = scoreValue;
+                score.text = highscore.ToString();
+            }
         }
     }
 }
