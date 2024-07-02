@@ -10,6 +10,7 @@ public class enemy : MonoBehaviour
     private Rigidbody2D rb;
     public float rotatespeed = 0.25f;
 
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,15 +49,12 @@ public class enemy : MonoBehaviour
             target = player.transform;
         }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+       
+        if (collision.gameObject.CompareTag("Bullet"))
         {
-            Destroy(collision.gameObject);
-            target = null;
-        }else if (collision.gameObject.CompareTag("Bullet"))
-        {
+            scoreCount.scoreValue++;
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

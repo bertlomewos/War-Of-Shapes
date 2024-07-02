@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class playerMovment : MonoBehaviour
 {
+    //movment
     public float speed = 5;
     private Rigidbody2D rb;
     public Vector2 direction;
@@ -16,10 +17,13 @@ public class playerMovment : MonoBehaviour
     [SerializeField] private float fireRate = 0.5f;
     private float shootTime;
 
+
+
     private void Start()
     {
         //sets the rigidbody 
         rb = GetComponent<Rigidbody2D>();
+
     }
 
     private void Update()
@@ -42,7 +46,7 @@ public class playerMovment : MonoBehaviour
         }
        
     }
-
+ 
     private void shoot()
     {
         Instantiate(bulletprefab, shootingpoint.position, shootingpoint.rotation);
