@@ -7,6 +7,7 @@ public class scoreCount : MonoBehaviour
 {
     public static int scoreValue = 0;
     public Text score;
+    public Text hightext;
     private static int highscore = 0;
     
     // Start is called before the first frame update
@@ -25,8 +26,8 @@ public class scoreCount : MonoBehaviour
             if(scoreValue > highscore) 
             {
                 highscore = scoreValue;
-                score.text = highscore.ToString();
             }
+            hightext.text = highscore.ToString();
         }
     }
 }
