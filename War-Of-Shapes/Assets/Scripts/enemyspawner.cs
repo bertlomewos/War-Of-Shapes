@@ -6,41 +6,47 @@ public class enemyspawner : MonoBehaviour
 {
     [Range(0, 50)]
     [SerializeField] private float spawnRate = 2f;
-    //making it static makes it the only one throughout the scoop of the gloab it is not an instance
     public static bool spawning;
 
-    //this is an arrry of game objects (in this instance array of enemies )
+    // Array of enemy prefabs
     [SerializeField] private GameObject[] enemyPrefab;
 
-
+    // Counter to track the number of spawned enemies
+    public int enemiesSpawned = 0;
+    public int maxEnemies = 100;
 
     private void Awake()
     {
         spawning = true;
     }
+
     private void Start()
     {
-        StartCoroutine(spawner());
+        StartCoroutine(Spawner());
     }
 
-    private IEnumerator spawner()
+    private IEnumerator Spawner()
     {
         WaitForSeconds wait = new WaitForSeconds(spawnRate);
 
         while (spawning)
         {
             yield return wait;
-            spawn();
+       
+            enemiesSpawned++;
+            if (enemiesSpawned >= maxEnemies)
+            {
+                Spawn();
+                spawning = false;
+            }
         }
     }
 
-    public void spawn()
+    public void Spawn()
     {
         int rand = Random.Range(0, enemyPrefab.Length);
-        GameObject enemyTospawn = enemyPrefab[rand];
+        GameObject enemyToSpawn = enemyPrefab[rand];
 
-        
-
-        Instantiate(enemyTospawn, transform.position, Quaternion.identity);
+        Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
     }
 }

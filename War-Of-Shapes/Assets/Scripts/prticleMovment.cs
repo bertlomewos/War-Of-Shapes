@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class enemy : MonoBehaviour
+public class prticlemovment : MonoBehaviour
 {
     public Transform target;
     public float speed = 5f;
@@ -22,7 +21,8 @@ public class enemy : MonoBehaviour
         {
             gettarget();
         }
-        else {
+        else
+        {
             //rotate twords target
             rotateTwordsTarget();
         }
@@ -49,20 +49,4 @@ public class enemy : MonoBehaviour
             target = player.transform;
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            //kill score
-            scoreCount.scoreValue++;
-
-            //highscore
-            PlayerPrefs.SetInt("highestScore", scoreCount.highscore);
-
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-
-    }
-
 }

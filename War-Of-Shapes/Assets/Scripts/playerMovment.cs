@@ -23,7 +23,7 @@ public class playerMovment : MonoBehaviour
 
     [Range(0.1f, 1f)]
     [SerializeField] private float fireRate;
-    [Range(0.1f, 1f)]
+   
     [SerializeField] private float fireRate2 = 0.5f;
 
     private float shootTime;
@@ -45,7 +45,7 @@ public class playerMovment : MonoBehaviour
         // Move the actual body
         if (rb != null)
         {
-            rb.velocity = direction * speed;
+            rb.velocity = direction * speed * Time.fixedDeltaTime;
         }
     }
 

@@ -6,11 +6,14 @@ using UnityEngine;
 
 public class tripletbullet : powerUpManager
 {
+    public static float expCount = 0;
+    public static float trashHold = 300;
 
-    
     public override void Apply(GameObject target)
     {
         playerMovment shootingpoint = target.GetComponent<playerMovment>();
-        shootingpoint.activate = true;
+        if(expCount == trashHold) { 
+            shootingpoint.activate = true;
+        }
     }
 }
