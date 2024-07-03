@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4058850
 Transform:
   m_ObjectHideFlags: 0
@@ -147,13 +147,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4058849}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0.8, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.10963891, w: 0.99397147}
+  m_LocalPosition: {x: 0.74999994, y: 0.79999995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1119679176}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.589}
 --- !u!1 &12422881
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +333,7 @@ Transform:
   m_GameObject: {fileID: 115338033}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 1.099, z: 0}
+  m_LocalPosition: {x: 0.01, y: 1.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -906,7 +906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.7830188, b: 0.7830188, a: 0.09019608}
+  m_Color: {r: 0.0694268, g: 0.18490559, b: 0.08165397, a: 0.3019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1138,7 +1138,7 @@ GameObject:
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &341595498
 Transform:
   m_ObjectHideFlags: 0
@@ -1147,13 +1147,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341595497}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.79, y: 0.77, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.10963474, w: 0.99397194}
+  m_LocalPosition: {x: -0.7900001, y: 0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1119679176}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 12.589}
 --- !u!1 &424210799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,7 +2201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &860972857
 Transform:
   m_ObjectHideFlags: 0
@@ -3140,7 +3140,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.30399975, g: 0.09235309, b: 0.4113207, a: 0}
+  m_BackGroundColor: {r: 0.25962973, g: 0.4808552, b: 0.5396226, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3837,7 +3837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4716981, g: 0.20202918, b: 0.20202918, a: 1}
+  m_Color: {r: 0, g: 0.4566037, b: 0.110272795, a: 0.29411766}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4772,15 +4772,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 400
-  direction: {x: 0, y: 0}
-  bulletprefab:
-  - {fileID: 7790435101352695829, guid: 9f0bcafa00bc48a4e9fb873d329cfd96, type: 3}
-  - {fileID: 7790435101352695829, guid: 323ea10dc0fe6cd4988a4bf1259c7f1a, type: 3}
-  shootingpoint: {fileID: 115338034}
-  shootingpoint1: {fileID: 341595498}
-  shootingpoint2: {fileID: 4058850}
+  bulletPrefab: {fileID: 7790435101352695829, guid: 9f0bcafa00bc48a4e9fb873d329cfd96, type: 3}
+  bulletPrefab1: {fileID: 7790435101352695829, guid: 323ea10dc0fe6cd4988a4bf1259c7f1a, type: 3}
+  bulletPrefab2: {fileID: 7790435101352695829, guid: 323ea10dc0fe6cd4988a4bf1259c7f1a, type: 3}
+  shootingPoint: {fileID: 115338034}
+  shootingPoint1: {fileID: 341595498}
+  shootingPoint2: {fileID: 4058850}
   activate: 0
   fireRate: 0.2
+  fireRate2: 0.2
 --- !u!114 &1794918843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5862,7 +5862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1902129155
 Transform:
   m_ObjectHideFlags: 0

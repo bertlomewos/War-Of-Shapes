@@ -30,7 +30,7 @@ public class enemy : MonoBehaviour
     private void FixedUpdate()
     {
         //move forwward
-        rb.velocity = transform.up * speed;
+        rb.velocity = transform.up * speed * Time.fixedDeltaTime;
     }
 
     private void rotateTwordsTarget()

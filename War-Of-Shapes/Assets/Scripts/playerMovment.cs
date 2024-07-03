@@ -1,75 +1,88 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class playerMovment : MonoBehaviour
 {
-    //movment
-    public float speed = 5;
+    // Movement
+    public float speed = 5f;
     private Rigidbody2D rb;
-    public Vector2 direction;
+    private Vector2 direction;
 
-    //shooting stuff
-    [SerializeField] private GameObject[] bulletprefab;
-    [SerializeField] private Transform shootingpoint;
-    [SerializeField] private Transform shootingpoint1;
-    [SerializeField] private Transform shootingpoint2;
+    // Shooting stuff
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject bulletPrefab1;
+    [SerializeField] private GameObject bulletPrefab2;
+    [SerializeField] private Transform shootingPoint;
+    [SerializeField] private Transform shootingPoint1;
+    [SerializeField] private Transform shootingPoint2;
 
-    
     public bool activate = false;
 
     [Range(0.1f, 1f)]
-    [SerializeField] private float fireRate = 0.5f;
+    [SerializeField] private float fireRate;
+    [Range(0.1f, 1f)]
+    [SerializeField] private float fireRate2 = 0.5f;
+
     private float shootTime;
-
-
+    private float shootTime2;
 
     private void Start()
     {
-        //sets the rigidbody 
+        // Sets the Rigidbody
         rb = GetComponent<Rigidbody2D>();
-
     }
 
     private void Update()
     {
-        if(shootTime <= 0f) 
-        { 
-        shoot();
-        shootTime = fireRate;
+        HandleShooting();
+    }
+
+    private void FixedUpdate()
+    {
+        // Move the actual body
+        if (rb != null)
+        {
+            rb.velocity = direction * speed;
+        }
+    }
+
+    private void HandleShooting()
+    {
+        if (shootTime <= 0f)
+        {
+            Shoot();
+            shootTime = fireRate;
         }
         else
         {
             shootTime -= Time.deltaTime;
         }
-    }
-    private void FixedUpdate()
-    { 
-        // move the actual body
-        if(rb != null)
+
+        if (activate && shootTime2 <= 0f)
         {
-            rb.velocity = direction * speed * Time.fixedDeltaTime;
+            ShootTwoMore();
+            shootTime2 = fireRate2;
         }
-       
+        else
+        {
+            shootTime2 -= Time.deltaTime;
+        }
     }
- 
-    private void shoot()
+
+    private void Shoot()
     {
-        
-
-        int rand = Random.Range(0, bulletprefab.Length);
-        GameObject bulletTospawn = bulletprefab[rand];
-
-        Instantiate(bulletTospawn, shootingpoint.position, shootingpoint.rotation);
-        if(activate == true)
-        {
-            Instantiate(bulletTospawn, shootingpoint1.position, shootingpoint1.rotation);
-            Instantiate(bulletTospawn, shootingpoint2.position, shootingpoint2.rotation);
-        }
-       
+        Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
     }
 
-    //access the new input system to know which directon it wants it to be pushed
+    private void ShootTwoMore()
+    {
+        Instantiate(bulletPrefab1, shootingPoint1.position, shootingPoint1.rotation);
+        Instantiate(bulletPrefab2, shootingPoint2.position, shootingPoint2.rotation);
+    }
+
+    // Access the new input system to know which direction it wants to be pushed
     private void OnMove(InputValue input) => direction = input.Get<Vector2>().normalized;
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    [Range(1, 10)]
-    [SerializeField] private float speed = 10f;
+    
+    [SerializeField] private float speed = 300f;
 
     [Range(1, 10)]
     [SerializeField] private float lifespan = 3f;
@@ -20,6 +20,6 @@ public class bullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = transform.up * speed;
+        rb.velocity = transform.up * speed * Time.fixedDeltaTime;
     }
 }
