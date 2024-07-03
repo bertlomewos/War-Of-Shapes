@@ -8,12 +8,12 @@ public class scoreCount : MonoBehaviour
     public static int scoreValue = 0;
     public Text score;
     public Text hightext;
-    private static int highscore = 0;
+    public static int highscore = 0;
     
     // Start is called before the first frame update
     void Start()
-    { 
-
+    {
+        highscore = PlayerPrefs.GetInt("highestScore", 0);
     }
 
     // Update is called once per frame

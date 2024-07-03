@@ -14,7 +14,11 @@ public class HealthBuff : powerUpManager
 
         if (healthComponent != null)
         {
-            healthComponent.currentHealth += amount;
+            if(healthComponent.currentHealth < healthComponent.maxHealth)
+            {
+                healthComponent.currentHealth += amount;
+            }
+            
 
         }
         else

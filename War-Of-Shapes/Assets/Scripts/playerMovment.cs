@@ -11,8 +11,14 @@ public class playerMovment : MonoBehaviour
     public Vector2 direction;
 
     //shooting stuff
-    [SerializeField] private GameObject bulletprefab;
+    [SerializeField] private GameObject[] bulletprefab;
     [SerializeField] private Transform shootingpoint;
+    [SerializeField] private Transform shootingpoint1;
+    [SerializeField] private Transform shootingpoint2;
+
+    
+    public bool activate = false;
+
     [Range(0.1f, 1f)]
     [SerializeField] private float fireRate = 0.5f;
     private float shootTime;
@@ -28,9 +34,10 @@ public class playerMovment : MonoBehaviour
 
     private void Update()
     {
-        if(shootTime <= 0f) { 
+        if(shootTime <= 0f) 
+        { 
         shoot();
-            shootTime = fireRate;
+        shootTime = fireRate;
         }
         else
         {
@@ -49,7 +56,18 @@ public class playerMovment : MonoBehaviour
  
     private void shoot()
     {
-        Instantiate(bulletprefab, shootingpoint.position, shootingpoint.rotation);
+        
+
+        int rand = Random.Range(0, bulletprefab.Length);
+        GameObject bulletTospawn = bulletprefab[rand];
+
+        Instantiate(bulletTospawn, shootingpoint.position, shootingpoint.rotation);
+        if(activate == true)
+        {
+            Instantiate(bulletTospawn, shootingpoint1.position, shootingpoint1.rotation);
+            Instantiate(bulletTospawn, shootingpoint2.position, shootingpoint2.rotation);
+        }
+       
     }
 
     //access the new input system to know which directon it wants it to be pushed

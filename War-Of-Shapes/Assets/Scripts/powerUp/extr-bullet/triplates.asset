@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4310becba37819a4b89e8ac165f7a988, type: 3}
-  m_Name: 30HP-regain
+  m_Script: {fileID: 11500000, guid: 5f1a838dd8314ba4bb3ad4caca7b1a31, type: 3}
+  m_Name: triplates
   m_EditorClassIdentifier: 
-  amount: 100
+  shootingpoint: {fileID: 0}
