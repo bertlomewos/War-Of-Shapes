@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2749970688137881647}
   - component: {fileID: 4418208752138036023}
   m_Layer: 0
-  m_Name: shootMORE
+  m_Name: expParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,5 +177,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 200
+  speed: 400
   rotatespeed: 0.25

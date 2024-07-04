@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,40 +10,69 @@ public class playerMovment : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 direction;
 
-    // Shooting stuff
+    // Shooting
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bulletPrefab1;
     [SerializeField] private GameObject bulletPrefab2;
+
+    [SerializeField] private GameObject bulletPrefab3;
+    [SerializeField] private GameObject bulletPrefab4;
+
 
 
     [SerializeField] private Transform shootingPoint;
     [SerializeField] private Transform shootingPoint1;
     [SerializeField] private Transform shootingPoint2;
 
+    [SerializeField] private Transform shootingPoint3;
+    [SerializeField] private Transform shootingPoint4;
+
     public bool activate = false;
+    public bool secondActive = false;
 
     [Range(0.1f, 1f)]
-    [SerializeField] private float fireRate;
-   
+    [SerializeField] private float fireRate = 0.5f;
     [SerializeField] private float fireRate2 = 0.5f;
 
     private float shootTime;
     private float shootTime2;
 
+    public GameObject[] enemies;
+    public GameObject closestEnemy;
+    public static Vector2 targetDir;
+    public static bool activateFire = false;
+
     private void Start()
     {
-        // Sets the Rigidbody
+        // Set the Rigidbody
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        HandleShooting();
+        // Find the closest enemy
+        FindClosestEnemy();
+
+        if (closestEnemy != null)
+        {
+            // Rotate towards the closest enemy
+            MoveShootingPointsTowardsTarget(closestEnemy.transform);
+        }
+        else
+        {
+            // Rotate the shooting points based on the player's movement direction
+            MoveShootingPoints();
+        }
+
+        if (activateFire == true)
+        {
+            HandleShooting();
+        }
     }
 
     private void FixedUpdate()
     {
-        // Move the actual body
+        // Move the player
         if (rb != null)
         {
             rb.velocity = direction * speed * Time.fixedDeltaTime;
@@ -53,7 +81,7 @@ public class playerMovment : MonoBehaviour
 
     private void HandleShooting()
     {
-        if (shootTime <= 0f)
+        if (closestEnemy != null && shootTime <= 0f)
         {
             Shoot();
             shootTime = fireRate;
@@ -63,7 +91,7 @@ public class playerMovment : MonoBehaviour
             shootTime -= Time.deltaTime;
         }
 
-        if (activate && shootTime2 <= 0f)
+        if (activate && closestEnemy != null && shootTime2 <= 0f)
         {
             ShootTwoMore();
             shootTime2 = fireRate2;
@@ -71,6 +99,53 @@ public class playerMovment : MonoBehaviour
         else
         {
             shootTime2 -= Time.deltaTime;
+        }
+
+        if (secondActive && closestEnemy != null && shootTime2 <= 0f)
+        {
+            ShootFourMore();
+            shootTime2 = fireRate2;
+        }
+        else
+        {
+            shootTime2 -= Time.deltaTime;
+        }
+    }
+
+    private void MoveShootingPointsTowardsTarget(Transform target)
+    {
+        targetDir = (target.position - transform.position).normalized;
+        shootingPoint.position = transform.position + (Vector3)targetDir;
+    }
+
+    private void MoveShootingPoints()
+    {
+        if (direction != Vector2.zero)
+        {
+            Vector2 moveDir = direction.normalized;
+            shootingPoint.position = transform.position + (Vector3)moveDir;
+        }
+    }
+
+    private void FindClosestEnemy()
+    {
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if (enemies.Length > 0)
+        {
+            float minDistance = Mathf.Infinity;
+            foreach (GameObject enemy in enemies)
+            {
+                float distance = Vector3.Distance(transform.position, enemy.transform.position);
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    closestEnemy = enemy;
+                }
+            }
+        }
+        else
+        {
+            closestEnemy = null;
         }
     }
 
@@ -83,6 +158,11 @@ public class playerMovment : MonoBehaviour
     {
         Instantiate(bulletPrefab1, shootingPoint1.position, shootingPoint1.rotation);
         Instantiate(bulletPrefab2, shootingPoint2.position, shootingPoint2.rotation);
+    }
+    private void ShootFourMore()
+    {
+        Instantiate(bulletPrefab3, shootingPoint3.position, shootingPoint3.rotation);
+        Instantiate(bulletPrefab4, shootingPoint4.position, shootingPoint4.rotation);
     }
 
     // Access the new input system to know which direction it wants to be pushed

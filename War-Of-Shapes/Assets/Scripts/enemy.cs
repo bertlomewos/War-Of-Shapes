@@ -49,21 +49,13 @@ public class enemy : MonoBehaviour
             target = player.transform;
         }
     }
-/*    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("rang"))
         {
-            //kill score
-            scoreCount.scoreValue++;
-
-            //highscore
-            PlayerPrefs.SetInt("highestScore", scoreCount.highscore);
-
-            //distroy yourself
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
+            playerMovment.activateFire = true;
         }
 
-    }*/
+    }
 
 }
