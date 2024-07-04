@@ -15,6 +15,8 @@ public class playerMovment : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bulletPrefab1;
     [SerializeField] private GameObject bulletPrefab2;
+
+
     [SerializeField] private Transform shootingPoint;
     [SerializeField] private Transform shootingPoint1;
     [SerializeField] private Transform shootingPoint2;

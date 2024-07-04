@@ -9,7 +9,7 @@ public class healthBar : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
-    public void maxHealth(int health)
+    public void maxHealth(float health)
     {
         sli.value = health;
         sli.maxValue = health;

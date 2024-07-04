@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyspawner : MonoBehaviour
+public class particleSpawner : MonoBehaviour
 {
     [Range(0, 50)]
     [SerializeField] private float spawnRate = 2f;
@@ -48,7 +48,6 @@ public class enemyspawner : MonoBehaviour
         int rand = Random.Range(0, enemyPrefab.Length);
         GameObject enemyToSpawn = enemyPrefab[rand];
 
-        Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
         Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
     }
 }

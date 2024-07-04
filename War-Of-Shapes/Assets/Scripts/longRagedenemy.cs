@@ -3,17 +3,28 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class enemy : MonoBehaviour
+public class longRangedenemy : MonoBehaviour
 {
     public Transform target;
     public float speed = 5f;
     private Rigidbody2D rb;
     public float rotatespeed = 0.25f;
 
+    public float distanceToshoot = 5f;
+    public float distanceToStop = 3f;
+
+    public Transform firingPoint;
+    [SerializeField] private GameObject bulletPrefab;
+    
+
+    public float firerate;
+    public float firetime;
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+   
     }
     private void Update()
     {
@@ -26,11 +37,42 @@ public class enemy : MonoBehaviour
             //rotate twords target
             rotateTwordsTarget();
         }
+        if(target != null && Vector2.Distance(target.position, transform.position) <= distanceToshoot)
+        {
+            shoot();
+        }
     }
     private void FixedUpdate()
     {
         //move forwward
-        rb.velocity = transform.up * speed * Time.fixedDeltaTime;
+
+        if (target)
+        {
+            float distance = Vector2.Distance(target.position, transform.position);
+
+            // Move forward if not too close to the target
+            if (distance > distanceToStop)
+            {
+                rb.velocity = transform.up * speed * Time.fixedDeltaTime;
+            }
+            else
+            {
+                rb.velocity = Vector2.zero;
+            }
+        }
+    }
+
+    private void shoot()
+    {
+        if(firetime <= 0f)
+        {
+            Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
+            firetime = firerate;
+        }
+        else
+        {
+            firetime -= Time.deltaTime;
+        }
     }
 
     private void rotateTwordsTarget()
@@ -49,21 +91,5 @@ public class enemy : MonoBehaviour
             target = player.transform;
         }
     }
-/*    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            //kill score
-            scoreCount.scoreValue++;
-
-            //highscore
-            PlayerPrefs.SetInt("highestScore", scoreCount.highscore);
-
-            //distroy yourself
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-
-    }*/
 
 }

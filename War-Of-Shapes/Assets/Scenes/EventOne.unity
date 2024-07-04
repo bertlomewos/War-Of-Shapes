@@ -195,14 +195,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 12422881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec82b9123d7a404185da76566813cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 9
+  spawnRate: 5
   enemyPrefab:
   - {fileID: 1441722116986257044, guid: 71ad4fbb77f148a499bf825e780e051d, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 100
+  maxEnemies: 5
 --- !u!1 &12804698
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,14 +880,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 204264544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &213587745
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,14 +929,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 213587745}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &246154938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,14 +1123,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 263245507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &264067549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,10 +1172,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 264067549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec82b9123d7a404185da76566813cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 4.02
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8042730974538199590, guid: 02eef0eb708d1ec4fa4b2b37a733ff53, type: 3}
   enemiesSpawned: 0
@@ -1221,14 +1221,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 287510540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &324297851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,14 +1446,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 409735956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &424210799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,7 +1701,7 @@ Transform:
   m_GameObject: {fileID: 484768479}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -28, y: -32, z: -0.023215018}
+  m_LocalPosition: {x: -99.9, y: 2.1, z: -0.023215018}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1716,10 +1716,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 484768479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec82b9123d7a404185da76566813cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 5
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8042730974538199590, guid: 02eef0eb708d1ec4fa4b2b37a733ff53, type: 3}
   enemiesSpawned: 0
@@ -1899,14 +1899,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 542849286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &562286895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,14 +2216,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 652171458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &687207364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,14 +2399,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 697015415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &703725380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,14 +2448,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 703725380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &728316798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2497,14 +2497,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 728316798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec82b9123d7a404185da76566813cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 9
+  spawnRate: 5
   enemyPrefab:
   - {fileID: 1441722116986257044, guid: 71ad4fbb77f148a499bf825e780e051d, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 100
+  maxEnemies: 5
 --- !u!1 &744605079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,14 +2726,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 838503453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &860972856
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,7 +3108,7 @@ Transform:
   m_GameObject: {fileID: 924535871}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23, y: -143, z: -0.023215018}
+  m_LocalPosition: {x: -62.4, y: -58.8, z: -0.023215018}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3123,10 +3123,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 924535871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec82b9123d7a404185da76566813cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 20
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8042730974538199590, guid: 02eef0eb708d1ec4fa4b2b37a733ff53, type: 3}
   enemiesSpawned: 0
@@ -3172,14 +3172,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 952687149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &968828229
 GameObject:
   m_ObjectHideFlags: 0
@@ -3430,14 +3430,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1021596949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec82b9123d7a404185da76566813cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 3.2
+  spawnRate: 5
   enemyPrefab:
   - {fileID: 1441722116986257044, guid: 71ad4fbb77f148a499bf825e780e051d, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 100
+  maxEnemies: 5
 --- !u!1 &1040346083
 GameObject:
   m_ObjectHideFlags: 0
@@ -3999,7 +3999,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 864073905114849180, guid: 1bc73ee672d09cd40aff5c132160c5d2, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 100
+  maxEnemies: 150
 --- !u!4 &1082564713
 Transform:
   m_ObjectHideFlags: 0
@@ -4542,14 +4542,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1278875565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &1288300597
 GameObject:
   m_ObjectHideFlags: 0
@@ -4591,14 +4591,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1288300597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &1298547618
 GameObject:
   m_ObjectHideFlags: 0
@@ -4640,14 +4640,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1298547618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &1333215226
 GameObject:
   m_ObjectHideFlags: 0
@@ -4682,7 +4682,7 @@ MonoBehaviour:
   - {fileID: 864073905114849180, guid: 1bc73ee672d09cd40aff5c132160c5d2, type: 3}
   - {fileID: 864073905114849180, guid: b8cbc01f95230324bb9935e7a4acd24b, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 100
+  maxEnemies: 150
 --- !u!4 &1333215228
 Transform:
   m_ObjectHideFlags: 0
@@ -4814,14 +4814,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1375580892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &1427552216
 GameObject:
   m_ObjectHideFlags: 0
@@ -4943,14 +4943,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1455876648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &1552815860
 GameObject:
   m_ObjectHideFlags: 0
@@ -4992,14 +4992,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1552815860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec82b9123d7a404185da76566813cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 5
   enemyPrefab:
   - {fileID: 1441722116986257044, guid: 71ad4fbb77f148a499bf825e780e051d, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 100
+  maxEnemies: 5
 --- !u!1 &1586892555
 GameObject:
   m_ObjectHideFlags: 0
@@ -5041,14 +5041,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1586892555}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec82b9123d7a404185da76566813cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 9
+  spawnRate: 5
   enemyPrefab:
   - {fileID: 1441722116986257044, guid: 71ad4fbb77f148a499bf825e780e051d, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 100
+  maxEnemies: 5
 --- !u!1 &1596834701
 GameObject:
   m_ObjectHideFlags: 0
@@ -5188,7 +5188,7 @@ Transform:
   m_GameObject: {fileID: 1646958241}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35, y: 39, z: -0.023215018}
+  m_LocalPosition: {x: -54.8, y: 47, z: -0.023215018}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5203,7 +5203,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1646958241}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec82b9123d7a404185da76566813cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 2
@@ -5571,7 +5571,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -5652,7 +5652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 1226383506}
   pauseButton: {fileID: 246154938}
-  maxHealth: 200
+  maxHealth: 1000
   currentHealth: 0
   healthbar: {fileID: 1843069876}
   damage: 20
@@ -5830,14 +5830,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1826711386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &1835739153
 GameObject:
   m_ObjectHideFlags: 0
@@ -6073,7 +6073,7 @@ Transform:
   m_GameObject: {fileID: 1842512679}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2286, y: -31.2576, z: -0.059013084}
+  m_LocalPosition: {x: -4.6, y: -11.5, z: -0.059013084}
   m_LocalScale: {x: 0.33226654, y: 0.46079, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6088,14 +6088,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1842512679}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec82b9123d7a404185da76566813cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 9
+  spawnRate: 10
   enemyPrefab:
   - {fileID: 1441722116986257044, guid: 71ad4fbb77f148a499bf825e780e051d, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 100
+  maxEnemies: 5
 --- !u!1 &1843069873
 GameObject:
   m_ObjectHideFlags: 0
@@ -6180,9 +6180,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 200
+  m_MaxValue: 1000
   m_WholeNumbers: 0
-  m_Value: 200
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6209,8 +6209,8 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 19506
-    ctime1: 41865
+    ctime0: 16384
+    ctime1: 32768
     ctime2: 65535
     ctime3: 0
     ctime4: 0
@@ -6672,7 +6672,7 @@ MonoBehaviour:
   - {fileID: 864073905114849180, guid: 1bc73ee672d09cd40aff5c132160c5d2, type: 3}
   - {fileID: 864073905114849180, guid: b8cbc01f95230324bb9935e7a4acd24b, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 100
+  maxEnemies: 150
 --- !u!1 &1868237355
 GameObject:
   m_ObjectHideFlags: 0
@@ -6798,14 +6798,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1879584776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &1902129154
 GameObject:
   m_ObjectHideFlags: 0
@@ -6840,6 +6840,7 @@ Transform:
   - {fileID: 1333215228}
   - {fileID: 1866708854}
   - {fileID: 1967445228}
+  - {fileID: 2029429536}
   m_Father: {fileID: 1794918838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1925931430
@@ -6883,14 +6884,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1925931430}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &1944367118
 GameObject:
   m_ObjectHideFlags: 0
@@ -7016,7 +7017,7 @@ MonoBehaviour:
   - {fileID: 864073905114849180, guid: b8cbc01f95230324bb9935e7a4acd24b, type: 3}
   - {fileID: 864073905114849180, guid: 031d5aa7b96da1145a4f774e8a6bb9f0, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 100
+  maxEnemies: 150
 --- !u!1 &1968772206
 GameObject:
   m_ObjectHideFlags: 0
@@ -7130,10 +7131,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1996747410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec82b9123d7a404185da76566813cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 5
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8042730974538199590, guid: 02eef0eb708d1ec4fa4b2b37a733ff53, type: 3}
   enemiesSpawned: 0
@@ -7186,7 +7187,59 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 864073905114849180, guid: 1bc73ee672d09cd40aff5c132160c5d2, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 100
+  maxEnemies: 150
+--- !u!1 &2029429535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2029429536}
+  - component: {fileID: 2029429537}
+  m_Layer: 0
+  m_Name: Espawner Six
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2029429536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029429535}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -23, y: -143, z: -0.023215018}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1902129155}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2029429537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029429535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRate: 30
+  enemyPrefab:
+  - {fileID: 864073905114849180, guid: 1bc73ee672d09cd40aff5c132160c5d2, type: 3}
+  - {fileID: 864073905114849180, guid: b8cbc01f95230324bb9935e7a4acd24b, type: 3}
+  - {fileID: 864073905114849180, guid: 031d5aa7b96da1145a4f774e8a6bb9f0, type: 3}
+  - {fileID: 511308654323999376, guid: 879f7725e0a14a74baceaba6a0bffe2f, type: 3}
+  enemiesSpawned: 0
+  maxEnemies: 150
 --- !u!1 &2031224638
 GameObject:
   m_ObjectHideFlags: 0
@@ -7307,14 +7360,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2052216069}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ec82b9123d7a404185da76566813cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 9
+  spawnRate: 5
   enemyPrefab:
   - {fileID: 1441722116986257044, guid: 71ad4fbb77f148a499bf825e780e051d, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 100
+  maxEnemies: 5
 --- !u!1 &2063555857
 GameObject:
   m_ObjectHideFlags: 0
@@ -7356,14 +7409,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2063555857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318346bc689e65a40b4aced45969bbcc, type: 3}
+  m_Script: {fileID: 11500000, guid: fc0705a998e8d664d814aa53c9322021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 1
+  spawnRate: 2
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 1
+  maxEnemies: 2
 --- !u!1 &2084533806
 GameObject:
   m_ObjectHideFlags: 0
