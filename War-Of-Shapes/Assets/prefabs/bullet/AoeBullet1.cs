@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class AoeBullet1 : MonoBehaviour
 {
     [SerializeField] private float speed = 300f;
     [Range(1, 10)]
     [SerializeField] private float lifespan = 3f;
-    
+
     private Rigidbody2D rb;
 
 
@@ -15,20 +15,12 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, lifespan);
-
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = playerMovment.targetDir * speed * Time.fixedDeltaTime;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
+        // showing to a friend
+        rb.velocity = - transform.up * speed * Time.fixedDeltaTime;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -45,8 +37,7 @@ public class Bullet : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
 
-
-
+         
         }
     }
 }

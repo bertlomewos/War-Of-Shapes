@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6305578510062193444}
   - component: {fileID: 6405404334052383254}
   - component: {fileID: 3276446267942811941}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy faster
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -162,5 +162,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 350
+  speed: 450
   rotatespeed: 5

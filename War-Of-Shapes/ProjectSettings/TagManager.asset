@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Enemybullet
   - rang
+  - Deadzone
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - Water
   - UI
   - player
-  - 
-  - 
+  - sheild
+  - enemy
   - 
   - 
   - 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6341388312974465866}
   - component: {fileID: 7307800038733170479}
   - component: {fileID: 7462037176233840310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnenyLongRange
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1432711268479182714}
   - component: {fileID: 2752871411745087011}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5711852975941930505}
   - component: {fileID: 1191343801466113666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rocks (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3505919481592534796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shootingpointL
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -383,7 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5389893403341315323}
   - component: {fileID: 6614871480405000166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rocks (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
