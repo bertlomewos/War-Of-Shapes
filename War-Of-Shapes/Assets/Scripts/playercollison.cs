@@ -82,6 +82,8 @@ public class playercollison : MonoBehaviour
 
                 //stop everything
                 Time.timeScale = 0;
+                // make it false for indeadzone
+                deadzonescreen.SetActive(false);
             }
             
         }
@@ -113,6 +115,8 @@ public class playercollison : MonoBehaviour
 
                 //stop everything
                 Time.timeScale = 0;
+                // make it false for indeadzone
+                deadzonescreen.SetActive(false);
             }
         }
         if (collision.gameObject.CompareTag("Deadzone"))
@@ -129,29 +133,11 @@ public class playercollison : MonoBehaviour
         {
             indeadzone = true;
             dangerZoneDamage();
-            deadzonescreen.SetActive(true);
-            if (currentHealth <= 0)
+            if(deadzonescreen != null)
             {
-                //distroy the player
-                Destroy(gameObject);
-
-                //remove pause button
-                pauseButton.SetActive(false);
-
-                Debug.Log("game over");
-
-                //display game over screen
-                MenuControl.isgameover = true;
-
-                //disable joystick
-                joystick.SetActive(false);
-
-                //stop more enemeis from spawning
-                enemyspawner.spawning = false;
-
-                //stop everything
-                Time.timeScale = 0;
+                deadzonescreen.SetActive(true);
             }
+           
         }
     }
     public void GameOver()
