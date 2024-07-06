@@ -83,7 +83,10 @@ public class playercollison : MonoBehaviour
                 //stop everything
                 Time.timeScale = 0;
                 // make it false for indeadzone
-                deadzonescreen.SetActive(false);
+                if (deadzonescreen != null)
+                {
+                    deadzonescreen.SetActive(false);
+                }
             }
             
         }
@@ -116,13 +119,19 @@ public class playercollison : MonoBehaviour
                 //stop everything
                 Time.timeScale = 0;
                 // make it false for indeadzone
-                deadzonescreen.SetActive(false);
+                if (deadzonescreen != null)
+                {
+                    deadzonescreen.SetActive(false);
+                }
             }
         }
         if (collision.gameObject.CompareTag("Deadzone"))
         {
             indeadzone = false;
-            deadzonescreen.SetActive(false);
+            if (deadzonescreen != null)
+            {
+                deadzonescreen.SetActive(false);
+            }
         }
 
 
@@ -162,6 +171,8 @@ public class playercollison : MonoBehaviour
         //stop everything
         Time.timeScale = 0;
         // make it false for indeadzone
-        deadzonescreen.SetActive(false);
+            deadzonescreen.SetActive(false);
+   
+
     }
 }
