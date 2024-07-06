@@ -13,11 +13,14 @@ public class tripletbullet : powerUpManager
     public override void Apply(GameObject target)
     {
         playerMovment shootingpoint = target.GetComponent<playerMovment>();
-        if(expCount == trashHold) { 
+        if(expCount == trashHold) {
+            AudioManager.instance.Play("levelUp");
             shootingpoint.activate = true;
+
         }
         if(expCount == secondTrashHold)
         {
+            AudioManager.instance.Play("levelUp");
             shootingpoint.secondActive = true;
         }
     }

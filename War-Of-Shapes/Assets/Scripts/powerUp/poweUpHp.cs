@@ -12,6 +12,7 @@ public class poweUpHp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            AudioManager.instance.Play("pickUp");
             Destroy(gameObject);
 
             //Exp increase

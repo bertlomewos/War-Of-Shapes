@@ -21,7 +21,7 @@ public class MenuControl : MonoBehaviour
     }
     private void Start()
     {
-        
+        AudioManager.instance.Play("backGround");
     }
     private void Update()
     {

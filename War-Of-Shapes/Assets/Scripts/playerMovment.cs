@@ -151,16 +151,19 @@ public class playerMovment : MonoBehaviour
 
     private void Shoot()
     {
+        AudioManager.instance.Play("shootOne");
         Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
     }
 
     private void ShootTwoMore()
     {
+        AudioManager.instance.Play("shootTwo");
         Instantiate(bulletPrefab1, shootingPoint1.position, shootingPoint1.rotation);
         Instantiate(bulletPrefab2, shootingPoint2.position, shootingPoint2.rotation);
     }
     private void ShootFourMore()
     {
+        AudioManager.instance.Play("shootTwo");
         Instantiate(bulletPrefab3, shootingPoint3.position, shootingPoint3.rotation);
         Instantiate(bulletPrefab4, shootingPoint4.position, shootingPoint4.rotation);
     }

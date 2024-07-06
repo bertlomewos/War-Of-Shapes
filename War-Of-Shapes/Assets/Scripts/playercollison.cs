@@ -61,32 +61,9 @@ public class playercollison : MonoBehaviour
 
             takeDamage();
             if (currentHealth <= 0)
-            { 
+            {
 
-               //distroy the player
-                Destroy(gameObject);
-
-                //remove pause button
-                pauseButton.SetActive(false);
-                
-                Debug.Log("game over");
-
-                //display game over screen
-                MenuControl.isgameover = true;
-
-                //disable joystick
-                joystick.SetActive(false);
-
-                //stop more enemeis from spawning
-                enemyspawner.spawning = false;
-
-                //stop everything
-                Time.timeScale = 0;
-                // make it false for indeadzone
-                if (deadzonescreen != null)
-                {
-                    deadzonescreen.SetActive(false);
-                }
+                GameOver();
             }
             
         }
@@ -99,30 +76,7 @@ public class playercollison : MonoBehaviour
             takeDamage();
             if (currentHealth <= 0)
             {
-                //distroy the player
-                Destroy(gameObject);
-
-                //remove pause button
-                pauseButton.SetActive(false);
-
-                Debug.Log("game over");
-
-                //display game over screen
-                MenuControl.isgameover = true;
-
-                //disable joystick
-                joystick.SetActive(false);
-
-                //stop more enemeis from spawning
-                enemyspawner.spawning = false;
-
-                //stop everything
-                Time.timeScale = 0;
-                // make it false for indeadzone
-                if (deadzonescreen != null)
-                {
-                    deadzonescreen.SetActive(false);
-                }
+                GameOver();
             }
         }
         if (collision.gameObject.CompareTag("Deadzone"))
@@ -151,6 +105,8 @@ public class playercollison : MonoBehaviour
     }
     public void GameOver()
     {
+        //Adio play
+        AudioManager.instance.Play("GameOver");
         //distroy the player
         Destroy(gameObject);
 
@@ -171,8 +127,11 @@ public class playercollison : MonoBehaviour
         //stop everything
         Time.timeScale = 0;
         // make it false for indeadzone
+        if (deadzonescreen != null)
+        {
             deadzonescreen.SetActive(false);
-   
+        }
+
 
     }
 }
