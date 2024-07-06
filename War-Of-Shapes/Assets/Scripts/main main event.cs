@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class mainmainevent : MonoBehaviour
 {
+    private void Start()
+    {
+        AudioManager.instance.Play("backGround");
+    }
     public void loadscene(int index)
     {
         SceneManager.LoadScene(index);
