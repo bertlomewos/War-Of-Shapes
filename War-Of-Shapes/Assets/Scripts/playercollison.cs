@@ -18,6 +18,14 @@ public class playercollison : MonoBehaviour
     public float dd = 10f;
     public bool indeadzone = false;
 
+    //audio part
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -106,7 +114,7 @@ public class playercollison : MonoBehaviour
     public void GameOver()
     {
         //Adio play
-        AudioManager.instance.Play("GameOver");
+        audioManager.PlaySFX(audioManager.death);
         //distroy the player
         Destroy(gameObject);
 

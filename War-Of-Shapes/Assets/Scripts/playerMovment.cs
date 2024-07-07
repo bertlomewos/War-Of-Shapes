@@ -42,6 +42,15 @@ public class playerMovment : MonoBehaviour
     public static Vector2 targetDir;
     public static bool activateFire = false;
 
+    //audio part
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
+
     private void Start()
     {
         // Set the Rigidbody
@@ -83,6 +92,7 @@ public class playerMovment : MonoBehaviour
     {
         if (closestEnemy != null && shootTime <= 0f)
         {
+
             Shoot();
             shootTime = fireRate;
         }
@@ -151,19 +161,22 @@ public class playerMovment : MonoBehaviour
 
     private void Shoot()
     {
-        AudioManager.instance.Play("shootOne");
+        //Adio play
+        audioManager.PlaySFX(audioManager.shootOne);
         Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
     }
 
     private void ShootTwoMore()
     {
-        AudioManager.instance.Play("shootTwo");
+        //Adio play
+        audioManager.PlaySFX(audioManager.shootTwo);
         Instantiate(bulletPrefab1, shootingPoint1.position, shootingPoint1.rotation);
         Instantiate(bulletPrefab2, shootingPoint2.position, shootingPoint2.rotation);
     }
     private void ShootFourMore()
     {
-        AudioManager.instance.Play("shootTwo");
+        //Adio play
+        audioManager.PlaySFX(audioManager.shootTwo);
         Instantiate(bulletPrefab3, shootingPoint3.position, shootingPoint3.rotation);
         Instantiate(bulletPrefab4, shootingPoint4.position, shootingPoint4.rotation);
     }

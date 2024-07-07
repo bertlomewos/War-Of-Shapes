@@ -9,6 +9,7 @@ TagManager:
   - Enemybullet
   - rang
   - Deadzone
+  - Audio
   layers:
   - Default
   - TransparentFX

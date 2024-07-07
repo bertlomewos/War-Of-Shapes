@@ -21,7 +21,7 @@ public class MenuControl : MonoBehaviour
     }
     private void Start()
     {
-        AudioManager.instance.Play("backGround");
+        
     }
     private void Update()
     {
@@ -56,9 +56,5 @@ public class MenuControl : MonoBehaviour
         tripletbullet.expCount = 0;
     }
   
-    //existing the game
-    public void exist()
-    {
-        Application.Quit();
-    }
+
 }

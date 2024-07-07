@@ -7,12 +7,22 @@ public class poweUpHp : MonoBehaviour
     public powerUpManager power;
     public float energyLevel = 50;
 
+    //audio part
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+  
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            AudioManager.instance.Play("pickUp");
+            //Adio play
+            audioManager.PlaySFX(audioManager.pickUp);
+
             Destroy(gameObject);
 
             //Exp increase
