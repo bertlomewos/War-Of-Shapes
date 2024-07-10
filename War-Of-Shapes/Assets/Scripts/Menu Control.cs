@@ -10,6 +10,7 @@ public class MenuControl : MonoBehaviour
     public static bool isgameover;
     public GameObject gameOverScreen;
     public GameObject pauseScreen;
+    public mainmainevent mme;
     
 
     //private bool ispaused = false;

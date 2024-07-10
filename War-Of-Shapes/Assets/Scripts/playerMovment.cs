@@ -45,6 +45,7 @@ public class playerMovment : MonoBehaviour
     //audio part
     AudioManager audioManager;
 
+
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -66,6 +67,7 @@ public class playerMovment : MonoBehaviour
         {
             // Rotate towards the closest enemy
             MoveShootingPointsTowardsTarget(closestEnemy.transform);
+
         }
         else
         {
@@ -77,6 +79,7 @@ public class playerMovment : MonoBehaviour
         {
             HandleShooting();
         }
+
     }
 
     private void FixedUpdate()
@@ -126,6 +129,7 @@ public class playerMovment : MonoBehaviour
     {
         targetDir = (target.position - transform.position).normalized;
         shootingPoint.position = transform.position + (Vector3)targetDir;
+      
     }
 
     private void MoveShootingPoints()
@@ -134,8 +138,10 @@ public class playerMovment : MonoBehaviour
         {
             Vector2 moveDir = direction.normalized;
             shootingPoint.position = transform.position + (Vector3)moveDir;
+           
         }
     }
+
 
     private void FindClosestEnemy()
     {
@@ -158,7 +164,6 @@ public class playerMovment : MonoBehaviour
             closestEnemy = null;
         }
     }
-
     private void Shoot()
     {
         //Adio play

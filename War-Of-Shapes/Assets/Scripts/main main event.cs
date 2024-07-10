@@ -12,8 +12,8 @@ public class mainmainevent : MonoBehaviour
     public Slider buttonSlider;
 
     public AudioMixer mixer;
-  
 
+ 
  
     private void Start()
     {
@@ -45,7 +45,7 @@ public class mainmainevent : MonoBehaviour
         mixer.SetFloat("button", volume);
         PlayerPrefs.SetFloat("buttonVolume", volume);
     }
-    private void loadValue()
+    public   void loadValue()
     {
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
         SFXSlider.value = PlayerPrefs.GetFloat("SFXVolume");

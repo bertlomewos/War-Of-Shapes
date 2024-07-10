@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 2d glow 4
+  m_Name: shooting AOE 1
   m_Shader: {fileID: -6465566751694194690, guid: 34dfec7ed9df7c04ba4e76c60bbba989, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -46,7 +46,7 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _GlowColor: {r: 63.61766, g: 63.61766, b: 63.61766, a: 0}
+    - _GlowColor: {r: 330426.38, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1232347380686153029
 MonoBehaviour:
