@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EventOne.unity
     guid: aa23954f7a53bb54b8d2c67c2421cbce
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BossRoomEventOne.unity
     guid: 2bfde4328ef03004c8d0192127660b35
   m_configObjects: {}
