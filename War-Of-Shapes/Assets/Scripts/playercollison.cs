@@ -10,13 +10,16 @@ public class playercollison : MonoBehaviour
 
     //health
     public float maxHealth = 1000f;
-    public float currentHealth;
+    public  float currentHealth;
 
     public healthBar healthbar;
 
     public float damage = 20f;
     public float dd = 10f;
     public bool indeadzone = false;
+
+    public bool isheilded = false;
+
 
     //audio part
     AudioManager audioManager;
@@ -38,9 +41,12 @@ public class playercollison : MonoBehaviour
 
     public void takeDamage()
     {
+        if(isheilded == false) 
+        { 
         currentHealth -= damage;
 
         healthbar.setHealth(currentHealth);
+        }
     }
     public void dangerZoneDamage()
     {
@@ -81,11 +87,14 @@ public class playercollison : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemybullet"))
         {
-            takeDamage();
-            if (currentHealth <= 0)
-            {
-                GameOver();
-            }
+         
+                takeDamage();
+                if (currentHealth <= 0)
+                {
+                    GameOver();
+                }
+            
+          
         }
         if (collision.gameObject.CompareTag("Deadzone"))
         {

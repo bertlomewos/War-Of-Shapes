@@ -11,11 +11,11 @@ public class Timer : MonoBehaviour
     float timeRemaining;
     public float maxTime  = 5.0f;
     public static bool isPlayerIn = false;
- 
 
     void Start()
     {
         timeRemaining = maxTime;
+       
     }
 
     void Update()
@@ -32,6 +32,8 @@ public class Timer : MonoBehaviour
             sheild.SetActive(false);
         }
        }
+
+    
 
     }
     private void OnTriggerEnter2D(Collider2D collision)

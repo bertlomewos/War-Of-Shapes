@@ -11,6 +11,9 @@ TagManager:
   - Deadzone
   - Audio
   - Mission
+  - Bound
+  - Nav
+  - miniSheild
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - player
   - sheild
   - enemy
-  - 
+  - minisheild
   - 
   - 
   - 
