@@ -12,13 +12,44 @@ public class missions : MonoBehaviour
     public float reqEnergy = 10f;
     bool isPlayerIn = false;
     playercollison playercollison;
-  
+
 
     //missions
     public GameObject mission2;
     void Start()
     {
         currentEnergy = 0;
+
+        // Ensure playercollison is set
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            playercollison = player.GetComponent<playercollison>();
+            if (playercollison == null)
+            {
+                Debug.LogError("playercollison component not found on the Player object.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Player object not found.");
+        }
+
+        // Additional null checks for the public fields
+        if (energyOrb == null)
+        {
+            Debug.LogError("Energy Orb Image is not assigned.");
+        }
+
+        if (mission == null)
+        {
+            Debug.LogError("Mission GameObject is not assigned.");
+        }
+
+        if (mission2 == null)
+        {
+            Debug.LogError("Mission2 GameObject is not assigned.");
+        }
     }
 
     // Update is called once per frame
@@ -30,18 +61,19 @@ public class missions : MonoBehaviour
             {
                 currentEnergy += Time.deltaTime;
                 energyOrb.fillAmount = currentEnergy / reqEnergy;
-
             }
             else
             {
                 Destroy(mission);
                 mission2.SetActive(true);
-                playercollison.isheilded = true;
+                if (playercollison != null)
+                {
+                    playercollison.currentHealth += 100;
+                }
             }
         }
-       
-      
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -49,6 +81,7 @@ public class missions : MonoBehaviour
             isPlayerIn = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

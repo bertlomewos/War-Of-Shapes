@@ -8,12 +8,12 @@ TagManager:
   - Enemy
   - Enemybullet
   - rang
-  - Deadzone
   - Audio
   - Mission
   - Bound
   - Nav
   - miniSheild
+  - SafeZone
   layers:
   - Default
   - TransparentFX

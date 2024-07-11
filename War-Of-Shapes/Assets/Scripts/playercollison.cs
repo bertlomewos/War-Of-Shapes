@@ -18,7 +18,6 @@ public class playercollison : MonoBehaviour
     public float dd = 10f;
     public bool indeadzone = false;
 
-    public bool isheilded = false;
 
 
     //audio part
@@ -41,12 +40,9 @@ public class playercollison : MonoBehaviour
 
     public void takeDamage()
     {
-        if(isheilded == false) 
-        { 
-        currentHealth -= damage;
 
+        currentHealth -= damage;
         healthbar.setHealth(currentHealth);
-        }
     }
     public void dangerZoneDamage()
     {
@@ -96,7 +92,7 @@ public class playercollison : MonoBehaviour
             
           
         }
-        if (collision.gameObject.CompareTag("Deadzone"))
+        if (collision.gameObject.CompareTag("SafeZone"))
         {
             indeadzone = false;
             if (deadzonescreen != null)
@@ -109,7 +105,7 @@ public class playercollison : MonoBehaviour
         }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Deadzone"))
+        if (collision.gameObject.CompareTag("SafeZone"))
         {
             indeadzone = true;
             dangerZoneDamage();
