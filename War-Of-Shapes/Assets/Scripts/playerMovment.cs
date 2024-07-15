@@ -41,6 +41,9 @@ public class playerMovment : MonoBehaviour
     public GameObject closestEnemy;
     public static Vector2 targetDir;
     public static bool activateFire = false;
+    public GameObject navigationArrow;
+
+
 
     //audio part
     AudioManager audioManager;
@@ -117,6 +120,7 @@ public class playerMovment : MonoBehaviour
         if (secondActive && closestEnemy != null && shootTime2 <= 0f)
         {
             ShootFourMore();
+            navigationArrow.SetActive(true);
             shootTime2 = fireRate2;
         }
         else
@@ -124,6 +128,8 @@ public class playerMovment : MonoBehaviour
             shootTime2 -= Time.deltaTime;
         }
     }
+
+   
 
     private void MoveShootingPointsTowardsTarget(Transform target)
     {

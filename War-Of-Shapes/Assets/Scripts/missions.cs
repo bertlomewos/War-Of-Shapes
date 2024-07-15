@@ -68,7 +68,7 @@ public class missions : MonoBehaviour
                 mission2.SetActive(true);
                 if (playercollison != null)
                 {
-                    playercollison.currentHealth += 100;
+                    playercollison.currentHealth += 500;
                 }
             }
         }

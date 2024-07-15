@@ -18,6 +18,13 @@ public class playercollison : MonoBehaviour
     public float dd = 10f;
     public bool indeadzone = false;
 
+    //sheild 
+    public static bool sheildActive = false;
+    public GameObject sheild;
+    public float sheildTime;
+    public float maxSheildTime = 5f;
+    public float sheildHp = 500;
+
 
 
     //audio part
@@ -32,10 +39,12 @@ public class playercollison : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthbar.setHealth(maxHealth);
+        sheildTime = maxSheildTime;
     }
     private void Update()
     {
         healthbar.setHealth(currentHealth);
+        
     }
 
     public void takeDamage()
@@ -50,6 +59,12 @@ public class playercollison : MonoBehaviour
 
         healthbar.setHealth(currentHealth);
     }
+
+    public void playerSheild()
+    {
+        //add the mechanics 
+    }
+
     private void FixedUpdate()
     {
         if(deadzonescreen != null && indeadzone == true)
@@ -61,6 +76,7 @@ public class playercollison : MonoBehaviour
                 GameOver();
             }
         }
+        playerSheild();
 
     }
 
