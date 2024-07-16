@@ -7,8 +7,9 @@ using UnityEngine;
 public class tripletbullet : powerUpManager
 {
     public static float expCount = 0;
-    public static float trashHold = 500;
-    public static float secondTrashHold = 1000;
+    public static float trashHold = 1000;
+    public static float secondTrashHold = 2000;
+    public static float thirdTrashHold = 3000;
 
     //audio
     AudioManager audioManager;
@@ -34,7 +35,7 @@ public class tripletbullet : powerUpManager
             shootingpoint.activate = true;
 
         }
-        if(expCount == secondTrashHold)
+        if(expCount == secondTrashHold && expCount >= trashHold)
         {
             // Check if audioManager is not null before calling PlaySFX()
             if (audioManager != null)
@@ -43,6 +44,16 @@ public class tripletbullet : powerUpManager
                 audioManager.PlaySFX(audioManager.levelUp);
             }
             shootingpoint.secondActive = true;
+        }
+        if (expCount == thirdTrashHold && expCount >= secondTrashHold && expCount >= trashHold)
+        {
+            // Check if audioManager is not null before calling PlaySFX()
+            if (audioManager != null)
+            {
+                //Adio play
+                audioManager.PlaySFX(audioManager.levelUp);
+            }
+            shootingpoint.thirdActivate = true;
         }
     }
 }

@@ -22,7 +22,7 @@ public class playercollison : MonoBehaviour
     public static bool sheildActive = false;
     public GameObject sheild;
     public float sheildTime;
-    public float maxSheildTime = 5f;
+    public float maxSheildTime = 15f;
     public float sheildHp = 500;
 
 
@@ -44,7 +44,15 @@ public class playercollison : MonoBehaviour
     private void Update()
     {
         healthbar.setHealth(currentHealth);
-        
+
+        if(currentHealth <= maxHealth / 4)
+        {
+            playerSheild();
+        }
+        else
+        {
+            sheild.SetActive(false);
+        }
     }
 
     public void takeDamage()
@@ -62,7 +70,14 @@ public class playercollison : MonoBehaviour
 
     public void playerSheild()
     {
-        //add the mechanics 
+        if(sheildTime > 0) { 
+            sheild.SetActive(true);
+            sheildTime -= Time.deltaTime;
+        }
+        else
+        {
+            sheild.SetActive(false);
+        }
     }
 
     private void FixedUpdate()
@@ -76,7 +91,6 @@ public class playercollison : MonoBehaviour
                 GameOver();
             }
         }
-        playerSheild();
 
     }
 

@@ -2678,7 +2678,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &207212216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,7 +2802,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &217244635
 GameObject:
   m_ObjectHideFlags: 0
@@ -3377,7 +3377,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &263718347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3666,7 +3666,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &317046013
 GameObject:
   m_ObjectHideFlags: 0
@@ -4661,7 +4661,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &415713482
 GameObject:
   m_ObjectHideFlags: 0
@@ -5015,7 +5015,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.2920901, g: 0.24674262, b: 0.5471698, a: 0.4}
   m_FlipX: 0
   m_FlipY: 0
@@ -5026,8 +5026,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &427741323
-CircleCollider2D:
+--- !u!60 &427741323
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5042,7 +5042,7 @@ CircleCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 767
-  m_LayerOverridePriority: 20
+  m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5059,8 +5059,21 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.28866667}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5773587}
+      - {x: -0.5, y: -0.28866667}
+      - {x: 0.5, y: -0.28866667}
+  m_UseDelaunayMesh: 0
 --- !u!1 &430069179
 GameObject:
   m_ObjectHideFlags: 0
@@ -6054,7 +6067,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &547423956
 GameObject:
   m_ObjectHideFlags: 0
@@ -7052,7 +7065,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &687207364
 GameObject:
   m_ObjectHideFlags: 0
@@ -7235,7 +7248,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &703725380
 GameObject:
   m_ObjectHideFlags: 0
@@ -7284,7 +7297,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &728316798
 GameObject:
   m_ObjectHideFlags: 0
@@ -12702,7 +12715,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &854373379
 GameObject:
   m_ObjectHideFlags: 0
@@ -13370,7 +13383,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &968828229
 GameObject:
   m_ObjectHideFlags: 0
@@ -14041,7 +14054,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -14791,7 +14804,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 531348503}
   m_HandleRect: {fileID: 1455727891}
   m_Direction: 0
-  m_MinValue: -50
+  m_MinValue: -60
   m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
@@ -20062,6 +20075,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194831434}
   m_CullTransparentMesh: 1
+--- !u!1 &1202123347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1202123348}
+  m_Layer: 6
+  m_Name: shootAOEb
+  m_TagString: Untagged
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1202123348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202123347}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.939, y: -0.105, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1874670305}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1210303401
 GameObject:
   m_ObjectHideFlags: 0
@@ -20394,7 +20438,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 118605697}
   m_HandleRect: {fileID: 37395196}
   m_Direction: 0
-  m_MinValue: -50
+  m_MinValue: -60
   m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
@@ -20591,7 +20635,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &1279259453
 GameObject:
   m_ObjectHideFlags: 0
@@ -20722,7 +20766,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &1298547618
 GameObject:
   m_ObjectHideFlags: 0
@@ -20771,7 +20815,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &1315539760
 GameObject:
   m_ObjectHideFlags: 0
@@ -20962,7 +21006,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1937581031}
   m_HandleRect: {fileID: 503062719}
   m_Direction: 0
-  m_MinValue: -50
+  m_MinValue: -60
   m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
@@ -21031,6 +21075,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1902129155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1346475803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346475804}
+  m_Layer: 6
+  m_Name: shootAOE (1)b
+  m_TagString: Untagged
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1346475804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346475803}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.894, y: 0.011, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1874670305}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1354071881
 GameObject:
   m_ObjectHideFlags: 0
@@ -21473,7 +21548,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &1376375741
 GameObject:
   m_ObjectHideFlags: 0
@@ -22367,7 +22442,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &1500090866
 GameObject:
   m_ObjectHideFlags: 0
@@ -24690,6 +24765,7 @@ Transform:
   - {fileID: 181763861}
   - {fileID: 1119679176}
   - {fileID: 193069819}
+  - {fileID: 1874670305}
   - {fileID: 497166682}
   - {fileID: 1654582007}
   - {fileID: 427741321}
@@ -24823,8 +24899,11 @@ MonoBehaviour:
   shootingPoint2: {fileID: 4058850}
   shootingPoint3: {fileID: 37137113}
   shootingPoint4: {fileID: 1315801883}
+  shootingPoint5: {fileID: 1202123348}
+  shootingPoint6: {fileID: 1346475804}
   activate: 0
   secondActive: 0
+  thirdActivate: 0
   fireRate: 1
   fireRate2: 0.5
   enemies: []
@@ -24853,7 +24932,8 @@ MonoBehaviour:
   indeadzone: 0
   sheild: {fileID: 427741320}
   sheildTime: 0
-  maxSheildTime: 5
+  maxSheildTime: 15
+  sheildHp: 500
 --- !u!1 &1818623538
 GameObject:
   m_ObjectHideFlags: 0
@@ -25131,7 +25211,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &1828328867
 GameObject:
   m_ObjectHideFlags: 0
@@ -26229,6 +26309,39 @@ MonoBehaviour:
   - {fileID: 864073905114849180, guid: b8cbc01f95230324bb9935e7a4acd24b, type: 3}
   enemiesSpawned: 0
   maxEnemies: 150
+--- !u!1 &1874670304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1874670305}
+  m_Layer: 6
+  m_Name: addshootinpoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1874670305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874670304}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1202123348}
+  - {fileID: 1346475804}
+  m_Father: {fileID: 1794918838}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1879584776
 GameObject:
   m_ObjectHideFlags: 0
@@ -26277,7 +26390,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &1883978463
 GameObject:
   m_ObjectHideFlags: 0
@@ -26456,7 +26569,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &1937581030
 GameObject:
   m_ObjectHideFlags: 0
@@ -26697,7 +26810,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1794918838}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 15
+    OrthographicSize: 20
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -32441,7 +32554,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8769873072983488451, guid: 5a43a9095c6b34f438a3d8de960d08eb, type: 3}
   enemiesSpawned: 0
-  maxEnemies: 5
+  maxEnemies: 3
 --- !u!1 &2084533806
 GameObject:
   m_ObjectHideFlags: 0

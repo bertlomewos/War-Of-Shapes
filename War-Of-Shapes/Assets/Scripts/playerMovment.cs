@@ -18,6 +18,9 @@ public class playerMovment : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab3;
     [SerializeField] private GameObject bulletPrefab4;
 
+/*    [SerializeField] private GameObject bulletPrefab5;
+    [SerializeField] private GameObject bulletPrefab6;
+*/
 
 
     [SerializeField] private Transform shootingPoint;
@@ -27,8 +30,11 @@ public class playerMovment : MonoBehaviour
     [SerializeField] private Transform shootingPoint3;
     [SerializeField] private Transform shootingPoint4;
 
+    [SerializeField] private Transform shootingPoint5;
+    [SerializeField] private Transform shootingPoint6;
     public bool activate = false;
     public bool secondActive = false;
+    public bool thirdActivate = false;
 
     [Range(0.1f, 1f)]
     [SerializeField] private float fireRate = 0.5f;
@@ -127,6 +133,16 @@ public class playerMovment : MonoBehaviour
         {
             shootTime2 -= Time.deltaTime;
         }
+        if (thirdActivate && closestEnemy != null && shootTime2 <= 0f)
+        {
+            shootSixMore();
+            shootTime2 = fireRate2;
+        }
+        else
+        {
+            shootTime2 -= Time.deltaTime;
+        }
+
     }
 
    
@@ -190,6 +206,13 @@ public class playerMovment : MonoBehaviour
         audioManager.PlaySFX(audioManager.shootTwo);
         Instantiate(bulletPrefab3, shootingPoint3.position, shootingPoint3.rotation);
         Instantiate(bulletPrefab4, shootingPoint4.position, shootingPoint4.rotation);
+    }
+    private void shootSixMore()
+    {
+        //Adio play
+        audioManager.PlaySFX(audioManager.shootTwo);
+        Instantiate(bulletPrefab1, shootingPoint5.position, shootingPoint5.rotation);
+        Instantiate(bulletPrefab2, shootingPoint6.position, shootingPoint6.rotation);
     }
 
     // Access the new input system to know which direction it wants to be pushed
