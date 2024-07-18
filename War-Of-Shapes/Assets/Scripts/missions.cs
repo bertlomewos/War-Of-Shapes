@@ -7,15 +7,14 @@ public class missions : MonoBehaviour
 {
     //Mission
     public GameObject mission;
+
+
     public Image energyOrb;
     float currentEnergy;
     public float reqEnergy = 10f;
     bool isPlayerIn = false;
     playercollison playercollison;
 
-
-    //missions
-    public GameObject mission2;
     void Start()
     {
         currentEnergy = 0;
@@ -45,11 +44,6 @@ public class missions : MonoBehaviour
         {
             Debug.LogError("Mission GameObject is not assigned.");
         }
-
-        if (mission2 == null)
-        {
-            Debug.LogError("Mission2 GameObject is not assigned.");
-        }
     }
 
     // Update is called once per frame
@@ -65,7 +59,6 @@ public class missions : MonoBehaviour
             else
             {
                 Destroy(mission);
-                mission2.SetActive(true);
                 if (playercollison != null)
                 {
                     playercollison.currentHealth += 500;

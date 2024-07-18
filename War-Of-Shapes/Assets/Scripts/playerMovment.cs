@@ -39,9 +39,15 @@ public class playerMovment : MonoBehaviour
     [Range(0.1f, 1f)]
     [SerializeField] private float fireRate = 0.5f;
     [SerializeField] private float fireRate2 = 0.5f;
+    [SerializeField] private float fireRate3 = 0.5f;
+    [SerializeField] private float fireRate4 = 0.5f;
+
+
 
     private float shootTime;
     private float shootTime2;
+    private float shootTime3;
+    private float shootTime4;
 
     public GameObject[] enemies;
     public GameObject closestEnemy;
@@ -89,6 +95,11 @@ public class playerMovment : MonoBehaviour
             HandleShooting();
         }
 
+        if(activate == true)
+        {
+            navigationArrow.SetActive(true);
+        }
+
     }
 
     private void FixedUpdate()
@@ -123,24 +134,23 @@ public class playerMovment : MonoBehaviour
             shootTime2 -= Time.deltaTime;
         }
 
-        if (secondActive && closestEnemy != null && shootTime2 <= 0f)
+        if (secondActive && closestEnemy != null && shootTime3 <= 0f)
         {
             ShootFourMore();
-            navigationArrow.SetActive(true);
-            shootTime2 = fireRate2;
+            shootTime3 = fireRate3;
         }
         else
         {
-            shootTime2 -= Time.deltaTime;
+            shootTime3 -= Time.deltaTime;
         }
-        if (thirdActivate && closestEnemy != null && shootTime2 <= 0f)
+        if (thirdActivate && closestEnemy != null && shootTime4 <= 0f)
         {
             shootSixMore();
-            shootTime2 = fireRate2;
+            shootTime4 = fireRate4;
         }
         else
         {
-            shootTime2 -= Time.deltaTime;
+            shootTime3 -= Time.deltaTime;
         }
 
     }

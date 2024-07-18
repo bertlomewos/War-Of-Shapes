@@ -35,7 +35,7 @@ public class tripletbullet : powerUpManager
             shootingpoint.activate = true;
 
         }
-        if(expCount == secondTrashHold && expCount >= trashHold)
+        if(expCount == secondTrashHold)
         {
             // Check if audioManager is not null before calling PlaySFX()
             if (audioManager != null)
@@ -45,7 +45,7 @@ public class tripletbullet : powerUpManager
             }
             shootingpoint.secondActive = true;
         }
-        if (expCount == thirdTrashHold && expCount >= secondTrashHold && expCount >= trashHold)
+        if (expCount == thirdTrashHold)
         {
             // Check if audioManager is not null before calling PlaySFX()
             if (audioManager != null)

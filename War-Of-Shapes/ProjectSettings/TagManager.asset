@@ -14,6 +14,7 @@ TagManager:
   - Nav
   - miniSheild
   - SafeZone
+  - rangAOE
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - sheild
   - enemy
   - minisheild
-  - 
+  - enemybullet
   - 
   - 
   - 

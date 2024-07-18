@@ -13,6 +13,13 @@ public class mainmainevent : MonoBehaviour
 
     public AudioMixer mixer;
 
+    //missions
+    public GameObject[] missions;
+    private int currentMissionIndex = 0;
+
+    public GameObject winnerPanel;
+    public GameObject pauseButton;
+
  
  
     private void Start()
@@ -25,6 +32,48 @@ public class mainmainevent : MonoBehaviour
             setMusicVolume();
             setSFXVolume();
             setButtonVolume();
+        }
+        InitializeMissions();
+    }
+    private void InitializeMissions()
+    {
+        for (int i = 0; i < missions.Length; i++)
+        {
+            missions[i].SetActive(false);
+        }
+        if (missions.Length > 0)
+        {
+            missions[0].SetActive(true);
+        }
+    }
+    private void FixedUpdate()
+    {
+        CheckMissions();
+    }
+
+    private void CheckMissions()
+    {
+        if (currentMissionIndex < missions.Length && missions[currentMissionIndex] == null)
+        {
+            currentMissionIndex++;
+            if (currentMissionIndex < missions.Length)
+            {
+                missions[currentMissionIndex].SetActive(true);
+            }
+            else
+            {
+                ShowWinnerPanel();
+            }
+        }
+    }
+
+    private void ShowWinnerPanel()
+    {
+        if (winnerPanel != null)
+        {
+            pauseButton.SetActive(false);
+            winnerPanel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
     public void setMusicVolume()
@@ -55,6 +104,8 @@ public class mainmainevent : MonoBehaviour
         setSFXVolume();
         setButtonVolume();
     }
+
+
     public void loadscene(int index)
     {
         SceneManager.LoadScene(index);
