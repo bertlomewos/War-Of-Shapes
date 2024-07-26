@@ -107,21 +107,23 @@ public class playercollison : MonoBehaviour
             }
             
         }
-      
+        if (collision.gameObject.CompareTag("Enemybullet"))
+        {
+
+            takeDamage();
+            Destroy(collision.gameObject);
+            if (currentHealth <= 0)
+            {
+                GameOver();
+            }
+
+
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemybullet"))
-        {
-         
-                takeDamage();
-                if (currentHealth <= 0)
-                {
-                    GameOver();
-                }
-            
-          
-        }
+
         if (collision.gameObject.CompareTag("SafeZone"))
         {
             indeadzone = false;

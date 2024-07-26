@@ -142,7 +142,7 @@ public class playerMovment : MonoBehaviour
         else
         {
             shootTime3 -= Time.deltaTime;
-        }
+        }       
         if (thirdActivate && closestEnemy != null && shootTime4 <= 0f)
         {
             shootSixMore();
@@ -150,7 +150,7 @@ public class playerMovment : MonoBehaviour
         }
         else
         {
-            shootTime3 -= Time.deltaTime;
+            shootTime4 -= Time.deltaTime;
         }
 
     }
