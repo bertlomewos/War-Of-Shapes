@@ -20,6 +20,13 @@ public class mainmainevent : MonoBehaviour
     public GameObject winnerPanel;
     public GameObject pauseButton;
 
+    //tutorial
+
+    public int doneGameT = 0;
+    public GameObject tutorialPanal;
+
+
+
  
  
     private void Start()
@@ -34,6 +41,8 @@ public class mainmainevent : MonoBehaviour
             setButtonVolume();
         }
         InitializeMissions();
+
+        doneGameT = PlayerPrefs.GetInt("doneGameT", 0);
     }
     private void InitializeMissions()
     {
@@ -115,6 +124,21 @@ public class mainmainevent : MonoBehaviour
         //setparticles to 0
         tripletbullet.expCount = 0;
     }
+
+        public void tutorial()
+        {
+            if(doneGameT == 0)
+            {
+                tutorialPanal.SetActive(true);
+                PlayerPrefs.SetInt("doneGameT", 1);
+        }
+            else
+            {
+                loadscene(1);
+            }
+        }
+
+
     //existing the game
     public void exist()
     {
