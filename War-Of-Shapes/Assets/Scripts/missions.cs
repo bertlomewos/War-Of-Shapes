@@ -61,7 +61,7 @@ public class missions : MonoBehaviour
                 Destroy(mission);
                 if (playercollison != null)
                 {
-                    playercollison.currentHealth += 500;
+                    playercollison.currentHealth += 300;
                 }
             }
         }

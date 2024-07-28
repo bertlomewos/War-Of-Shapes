@@ -2687,6 +2687,11 @@ MonoBehaviour:
   SFXSlider: {fileID: 1251195284}
   buttonSlider: {fileID: 1331239168}
   mixer: {fileID: 24100000, guid: 00e52ec0689f7ea48ac91651e40763b9, type: 2}
+  missions: []
+  winnerPanel: {fileID: 0}
+  pauseButton: {fileID: 0}
+  doneGameT: 0
+  tutorialPanal: {fileID: 0}
 --- !u!1 &242575554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3862,7 +3867,7 @@ Transform:
   m_GameObject: {fileID: 374552784}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.9999788, w: 0.0065199267}
-  m_LocalPosition: {x: -0.01, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3884,8 +3889,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.94716984, g: 0.7680319, b: 0, a: 1}
+  m_Intensity: 3.3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000012f8f47
@@ -9544,7 +9549,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 14
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9563,7 +9568,7 @@ Transform:
   m_GameObject: {fileID: 1203882892}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0268, y: 8.4887, z: 0}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
   m_LocalScale: {x: 9.716161, y: 9.671007, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13530,12 +13535,18 @@ MonoBehaviour:
   shootingPoint2: {fileID: 4058850}
   shootingPoint3: {fileID: 37137113}
   shootingPoint4: {fileID: 1315801883}
+  shootingPoint5: {fileID: 0}
+  shootingPoint6: {fileID: 0}
   activate: 0
   secondActive: 0
+  thirdActivate: 0
   fireRate: 1
   fireRate2: 0.5
+  fireRate3: 0.5
+  fireRate4: 0.5
   enemies: []
   closestEnemy: {fileID: 0}
+  navigationArrow: {fileID: 0}
 --- !u!114 &1794918843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13557,6 +13568,10 @@ MonoBehaviour:
   damage: 20
   dd: 50
   indeadzone: 0
+  sheild: {fileID: 0}
+  sheildTime: 0
+  maxSheildTime: 15
+  sheildHp: 500
 --- !u!1 &1823925447
 GameObject:
   m_ObjectHideFlags: 0
