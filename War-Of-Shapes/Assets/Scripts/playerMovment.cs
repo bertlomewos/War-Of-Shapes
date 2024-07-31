@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -49,7 +50,7 @@ public class playerMovment : MonoBehaviour
     private float shootTime3;
     private float shootTime4;
 
-    public GameObject[] enemies;
+    public List<GameObject> enemies;
     public GameObject closestEnemy;
     public static Vector2 targetDir;
     public static bool activateFire = false;
@@ -177,8 +178,8 @@ public class playerMovment : MonoBehaviour
 
     private void FindClosestEnemy()
     {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemies.Length > 0)
+        enemies = GameObject.FindGameObjectsWithTag("Enemy").ToList();
+        if (enemies.Count > 0)
         {
             float minDistance = Mathf.Infinity;
             foreach (GameObject enemy in enemies)
