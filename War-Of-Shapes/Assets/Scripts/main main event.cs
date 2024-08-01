@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using Cinemachine;
 
 public class mainmainevent : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class mainmainevent : MonoBehaviour
     public GameObject[] missions;
     private int currentMissionIndex = 0;
 
-    public GameObject winnerPanel;
+    public GameObject Boss;
     public GameObject pauseButton;
 
     //tutorial
@@ -25,17 +26,19 @@ public class mainmainevent : MonoBehaviour
     public int doneGameT = 0;
     public GameObject tutorialPanal;
 
+    //camera ref
+    private float zoomout = 30f;
+    public CinemachineVirtualCamera virtualCamera;
+    private float zoomSpeed = 5f; // Adjust the speed of zooming out
 
-
- 
- 
     private void Start()
     {
         if (PlayerPrefs.HasKey("musicVolume") || PlayerPrefs.HasKey("SFXVolume") || PlayerPrefs.HasKey("buttonVolume"))
         {
             loadValue();
         }
-        else { 
+        else
+        {
             setMusicVolume();
             setSFXVolume();
             setButtonVolume();
@@ -43,7 +46,11 @@ public class mainmainevent : MonoBehaviour
         InitializeMissions();
 
         doneGameT = PlayerPrefs.GetInt("doneGameT", 0);
+
+        virtualCamera = GetComponent<CinemachineVirtualCamera>();
+        // Rest of your Start() method
     }
+
     private void InitializeMissions()
     {
         for (int i = 0; i < missions.Length; i++)
@@ -55,6 +62,7 @@ public class mainmainevent : MonoBehaviour
             missions[0].SetActive(true);
         }
     }
+
     private void FixedUpdate()
     {
         CheckMissions();
@@ -78,32 +86,53 @@ public class mainmainevent : MonoBehaviour
 
     private void ShowWinnerPanel()
     {
-        if (winnerPanel != null)
+        if (Boss != null)
         {
-            pauseButton.SetActive(false);
-            winnerPanel.SetActive(true);
-            Time.timeScale = 0;
+            /*   pauseButton.SetActive(false);
+               winnerPanel.SetActive(true);
+               Time.timeScale = 0;*/
+
+            if (virtualCamera != null)
+            {
+                // Start coroutine to zoom out the camera
+                StartCoroutine(ZoomOutCamera());
+            }
+            Boss.SetActive(true);
         }
     }
+
+    private IEnumerator ZoomOutCamera()
+    {
+        float targetZoom = zoomout;
+        while (virtualCamera.m_Lens.OrthographicSize < targetZoom)
+        {
+            virtualCamera.m_Lens.OrthographicSize += zoomSpeed * Time.deltaTime;
+            yield return null;
+        }
+    }
+
     public void setMusicVolume()
     {
-       float volume = musicSlider.value;
+        float volume = musicSlider.value;
         mixer.SetFloat("music", volume);
         PlayerPrefs.SetFloat("musicVolume", volume);
     }
+
     public void setSFXVolume()
     {
         float volume = SFXSlider.value;
         mixer.SetFloat("SFX", volume);
         PlayerPrefs.SetFloat("SFXVolume", volume);
     }
+
     public void setButtonVolume()
     {
         float volume = buttonSlider.value;
         mixer.SetFloat("button", volume);
         PlayerPrefs.SetFloat("buttonVolume", volume);
     }
-    public   void loadValue()
+
+    public void loadValue()
     {
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
         SFXSlider.value = PlayerPrefs.GetFloat("SFXVolume");
@@ -114,35 +143,32 @@ public class mainmainevent : MonoBehaviour
         setButtonVolume();
     }
 
-
     public void loadscene(int index)
     {
         SceneManager.LoadScene(index);
         Time.timeScale = 1;
-        //Scorec count reset
+        //Score count reset
         scoreCount.scoreValue = 0;
-        //setparticles to 0
+        //set particles to 0
         tripletbullet.expCount = 0;
     }
 
-        public void tutorial()
+    public void tutorial()
+    {
+        if (doneGameT == 0)
         {
-            if(doneGameT == 0)
-            {
-                tutorialPanal.SetActive(true);
-                PlayerPrefs.SetInt("doneGameT", 1);
+            tutorialPanal.SetActive(true);
+            PlayerPrefs.SetInt("doneGameT", 1);
         }
-            else
-            {
-                loadscene(1);
-            }
+        else
+        {
+            loadscene(1);
         }
+    }
 
-
-    //existing the game
+    //exiting the game
     public void exist()
     {
         Application.Quit();
     }
-
 }
