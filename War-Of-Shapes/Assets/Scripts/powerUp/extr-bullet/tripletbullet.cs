@@ -25,9 +25,10 @@ public class tripletbullet : powerUpManager
             audioManager = audioGameObject.GetComponent<AudioManager>();
         }
         playerMovment shootingpoint = target.GetComponent<playerMovment>();
-        if(expCount >= trashHold) {
+        if(expCount >= trashHold) 
+        {
             // Check if audioManager is not null before calling PlaySFX()
-            if (audioManager != null)
+            if (audioManager != null && expCount == trashHold)
             {
                 //Adio play
                 audioManager.PlaySFX(audioManager.levelUp);
@@ -38,7 +39,7 @@ public class tripletbullet : powerUpManager
         if(expCount >= secondTrashHold)
         {
             // Check if audioManager is not null before calling PlaySFX()
-            if (audioManager != null)
+            if (audioManager != null && expCount == secondTrashHold)
             {
                 //Adio play
                 audioManager.PlaySFX(audioManager.levelUp);
@@ -48,7 +49,7 @@ public class tripletbullet : powerUpManager
         if (expCount >= thirdTrashHold)
         {
             // Check if audioManager is not null before calling PlaySFX()
-            if (audioManager != null)
+            if (audioManager != null && expCount == thirdTrashHold)
             {
                 //Adio play
                 audioManager.PlaySFX(audioManager.levelUp);

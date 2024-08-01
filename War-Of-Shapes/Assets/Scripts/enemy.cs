@@ -10,6 +10,7 @@ public class enemy : MonoBehaviour
     private Rigidbody2D rb;
     public float rotatespeed = 0.25f;
 
+    public static Vector2 targetdir;
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class enemy : MonoBehaviour
 
     private void rotateTwordsTarget()
     {
-        Vector2 targetdir = target.position - transform.position;
+        targetdir = target.position - transform.position;
         float angle = Mathf.Atan2(targetdir.y, targetdir.x) * Mathf.Rad2Deg - 90f;
         Quaternion q = Quaternion.Euler(new Vector3(0, 0, angle));
         transform.localRotation = Quaternion.Slerp(transform.localRotation, q, rotatespeed);
@@ -48,14 +49,6 @@ public class enemy : MonoBehaviour
         {
             target = player.transform;
         }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("rang"))
-        {
-            playerMovment.activateFire = true;
-        }
-
     }
 
 }

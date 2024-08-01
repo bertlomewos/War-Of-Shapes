@@ -91,10 +91,9 @@ public class playerMovment : MonoBehaviour
             MoveShootingPoints();
         }
 
-        if (activateFire == true)
-        {
-            HandleShooting();
-        }
+    
+        HandleShooting();
+        
 
         if(activate == true)
         {
@@ -178,7 +177,8 @@ public class playerMovment : MonoBehaviour
 
     private void FindClosestEnemy()
     {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy").ToList();
+        string enemyType = "BossEnemy";
+        enemies = GameObject.FindGameObjectsWithTag(enemyType).ToList();
         if (enemies.Count > 0)
         {
             float minDistance = Mathf.Infinity;

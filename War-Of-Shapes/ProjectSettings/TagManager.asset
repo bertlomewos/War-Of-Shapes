@@ -15,6 +15,7 @@ TagManager:
   - miniSheild
   - SafeZone
   - rangAOE
+  - BossEnemy
   layers:
   - Default
   - TransparentFX

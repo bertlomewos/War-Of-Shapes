@@ -37,7 +37,6 @@ public class AoeBullet1 : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
 
-         
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

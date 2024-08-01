@@ -14,6 +14,10 @@ public class missions : MonoBehaviour
     public float reqEnergy = 10f;
     bool isPlayerIn = false;
     playercollison playercollison;
+    playerMovment playerMovment;
+
+    public float heal;
+    public float speedUp;
 
     void Start()
     {
@@ -27,6 +31,11 @@ public class missions : MonoBehaviour
             if (playercollison == null)
             {
                 Debug.LogError("playercollison component not found on the Player object.");
+            }
+            playerMovment = player.GetComponent<playerMovment>();
+            if(playerMovment == null)
+            {
+                Debug.LogError("playerMovment component not found");
             }
         }
         else
@@ -61,7 +70,17 @@ public class missions : MonoBehaviour
                 Destroy(mission);
                 if (playercollison != null)
                 {
-                    playercollison.currentHealth += 300;
+                    if(playercollison.currentHealth < playercollison.maxHealth)
+                    {
+
+                    playercollison.currentHealth += heal;
+
+                    }
+
+                    if(playerMovment.speed < 1000)
+                    {
+                        playerMovment.speed += speedUp;
+                    }
                 }
             }
         }

@@ -22,6 +22,8 @@ public class poweUpHp : MonoBehaviour
         {
             //Adio play
             audioManager.PlaySFX(audioManager.pickUp);
+        
+
 
             Destroy(gameObject);
 

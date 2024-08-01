@@ -64,7 +64,6 @@ public class playercollison : MonoBehaviour
     public void dangerZoneDamage()
     {
         currentHealth -= dd;
-
         healthbar.setHealth(currentHealth);
     }
 
@@ -134,7 +133,7 @@ public class playercollison : MonoBehaviour
         }
 
 
-        }
+     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("SafeZone"))
