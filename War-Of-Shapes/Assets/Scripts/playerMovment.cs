@@ -57,6 +57,9 @@ public class playerMovment : MonoBehaviour
     public GameObject navigationArrow;
 
 
+    //enemy detection
+    public List<string> enemyType = new List<string> { "Enemy", "BossEnemy" };
+
 
     //audio part
     AudioManager audioManager;
@@ -93,12 +96,11 @@ public class playerMovment : MonoBehaviour
 
     
         HandleShooting();
-        
-
         if(activate == true)
         {
             navigationArrow.SetActive(true);
         }
+
 
     }
 
@@ -177,8 +179,14 @@ public class playerMovment : MonoBehaviour
 
     private void FindClosestEnemy()
     {
-        string enemyType = "BossEnemy";
-        enemies = GameObject.FindGameObjectsWithTag(enemyType).ToList();
+        enemies.Clear(); // Clear the list before adding new enemies
+
+        // Add all enemies and boss enemies to the list
+        foreach (string tag in enemyType)
+        {
+            enemies.AddRange(GameObject.FindGameObjectsWithTag(tag).ToList());
+        }
+
         if (enemies.Count > 0)
         {
             float minDistance = Mathf.Infinity;

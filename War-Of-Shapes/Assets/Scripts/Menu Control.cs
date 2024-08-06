@@ -22,7 +22,7 @@ public class MenuControl : MonoBehaviour
     }
     private void Start()
     {
-        
+        BossOne.BChealth = BossOne.BMXhealth;
     }
     private void Update()
     {

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class BossOne : MonoBehaviour
 {
 
-    public float BChealth=0;
-    public float BMXhealth = 1000;
+    public static float BChealth=0;
+    public static float BMXhealth = 7000;
     public float damageAmount = 20;
     public Image bossbar;
 
@@ -39,11 +39,15 @@ public class BossOne : MonoBehaviour
     [SerializeField] private float fireRateNormiST = 0.5f;
     private float shootTimeNormiST;
 
+    //died
+
+    public GameObject won;
+    public GameObject pause;
 
 
 
 
-    void Start()
+    void Awake()
     {
         BChealth = BMXhealth;
     }
@@ -104,8 +108,15 @@ public class BossOne : MonoBehaviour
             damage();
             if (BChealth <= 0)
             {
-                Destroy(gameObject);
+                gameOver();
             }
         }
+    }
+    public void gameOver()
+    {
+        Destroy(gameObject);
+        pause.SetActive(false);
+        won.SetActive(true);
+        Time.timeScale = 0;
     }
 }

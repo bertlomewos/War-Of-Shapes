@@ -171,7 +171,7 @@ MonoBehaviour:
   distanceToshoot: 10
   distanceToStop: 5
   firingPoint: {fileID: 3505919481592534796}
-  bulletPrefab: {fileID: 7790435101352695829, guid: 52b2357df4a2e8341b076b3a2d368637, type: 3}
+  bulletPrefab: {fileID: 7790435101352695829, guid: 4dc469a3b32385049bd6a5ba525ab76f, type: 3}
   firerate: 0.3
   firetime: 0
 --- !u!1 &530805507773045943
