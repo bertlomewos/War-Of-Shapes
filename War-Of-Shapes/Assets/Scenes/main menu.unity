@@ -4060,8 +4060,8 @@ MonoBehaviour:
   buttonSlider: {fileID: 1266975587}
   mixer: {fileID: 24100000, guid: 00e52ec0689f7ea48ac91651e40763b9, type: 2}
   missions: []
-  winnerPanel: {fileID: 0}
-  pauseButton: {fileID: 0}
+  Boss: {fileID: 0}
+  enemySpawner: {fileID: 0}
   doneGameT: 0
   tutorialPanal: {fileID: 1589314951}
 --- !u!1 &709389603
@@ -6850,8 +6850,8 @@ Transform:
   m_GameObject: {fileID: 1120302297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0602, y: -0.7567, z: 0}
-  m_LocalScale: {x: 0.47723073, y: 0.42240638, z: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

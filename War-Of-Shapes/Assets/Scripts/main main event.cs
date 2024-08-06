@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 using Cinemachine;
 
+
 public class mainmainevent : MonoBehaviour
 {
     public Slider musicSlider;
@@ -27,8 +28,9 @@ public class mainmainevent : MonoBehaviour
     public GameObject tutorialPanal;
 
     //camera ref
-    public CinemachineVirtualCamera virtualCamera;
-    private float zoomSpeed = 5f; // Adjust the speed of zooming out
+    private Camera Mcamera;
+    private CinemachineBrain brain;
+    private CinemachineVirtualCamera virtualCamera;
 
 
     private void Start()
@@ -47,11 +49,31 @@ public class mainmainevent : MonoBehaviour
 
         doneGameT = PlayerPrefs.GetInt("doneGameT", 0);
 
-        virtualCamera = GetComponent<CinemachineVirtualCamera>();
+       
+        Mcamera = Camera.main;
+        if(Mcamera != null)
+        {
+            brain = Mcamera.GetComponent<CinemachineBrain>();
+        }
+        if(brain != null)
+        {
+        virtualCamera = brain.ActiveVirtualCamera as CinemachineVirtualCamera;
+        }
 
-      
     }
+    private void Update()
+    {
 
+        Mcamera = Camera.main;
+        if (Mcamera != null)
+        {
+            brain = Mcamera.GetComponent<CinemachineBrain>();
+        }
+        if (brain != null)
+        {
+            virtualCamera = brain.ActiveVirtualCamera as CinemachineVirtualCamera;
+        }
+    }
     private void InitializeMissions()
     {
         for (int i = 0; i < missions.Length; i++)
@@ -81,7 +103,6 @@ public class mainmainevent : MonoBehaviour
             else
             {
                 ShowWinnerPanel();
-                Boss.SetActive(true);
             }
         }
     }
@@ -90,17 +111,10 @@ public class mainmainevent : MonoBehaviour
     {
         if (Boss != null)
         {
-            //Boss.SetActive(true);
+            Boss.SetActive(true);
             if (virtualCamera != null)
             {
-                // Get the current field of view value
-                float currentFOV = virtualCamera.m_Lens.FieldOfView;
-
-                // Increase the field of view to zoom out
-                currentFOV += zoomSpeed * Time.deltaTime;
-
-                // Update the field of view of the virtual camera
-                virtualCamera.m_Lens.FieldOfView = currentFOV;
+                virtualCamera.m_Lens.OrthographicSize = 30;
             }
             enemySpawner.SetActive(false);
             

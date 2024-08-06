@@ -44,7 +44,11 @@ public class BossOne : MonoBehaviour
     public GameObject won;
     public GameObject pause;
 
+    //rocks
 
+    public GameObject Rockrottate;
+    public float Rspeed = 45;
+    public GameObject Rockrottate2;
 
 
     void Awake()
@@ -79,6 +83,13 @@ public class BossOne : MonoBehaviour
         {
             shootTimeNormiST  -= Time.deltaTime;
         }
+
+        
+    }
+    private void FixedUpdate()
+    {
+        Rockrottate.transform.RotateAround(this.transform.position, Vector3.forward, Rspeed * Time.fixedDeltaTime);
+        Rockrottate2.transform.RotateAround(this.transform.position, Vector3.forward, Rspeed * Time.fixedDeltaTime);
     }
     public void damage()
     {
@@ -110,6 +121,7 @@ public class BossOne : MonoBehaviour
             {
                 gameOver();
             }
+            Destroy(collision.gameObject);
         }
     }
     public void gameOver()

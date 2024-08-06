@@ -64,5 +64,9 @@ public class enemyBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collision.gameObject.CompareTag("miniSheild"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
