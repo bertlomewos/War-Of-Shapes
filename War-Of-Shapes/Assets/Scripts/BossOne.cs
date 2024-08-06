@@ -90,7 +90,7 @@ public class BossOne : MonoBehaviour
     {
         Rockrottate.transform.RotateAround(this.transform.position, Vector3.forward, Rspeed * Time.fixedDeltaTime);
         Rockrottate2.transform.RotateAround(this.transform.position, Vector3.forward, Rspeed * Time.fixedDeltaTime);
-    }
+    }   
     public void damage()
     {
        BChealth -= damageAmount;

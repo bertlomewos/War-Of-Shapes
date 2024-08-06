@@ -32,6 +32,11 @@ public class mainmainevent : MonoBehaviour
     private CinemachineBrain brain;
     private CinemachineVirtualCamera virtualCamera;
 
+    [SerializeField] private float globalShack = 1f;
+
+    BossOne bs;
+    private CinemachineImpulseSource impuls;
+
 
     private void Start()
     {
@@ -58,6 +63,11 @@ public class mainmainevent : MonoBehaviour
         if(brain != null)
         {
         virtualCamera = brain.ActiveVirtualCamera as CinemachineVirtualCamera;
+        }
+
+        if(impuls != null)
+        {
+        impuls = bs.GetComponent<CinemachineImpulseSource>();
         }
 
     }
@@ -111,6 +121,10 @@ public class mainmainevent : MonoBehaviour
     {
         if (Boss != null)
         {
+            if(impuls != null)
+            {
+            camarashack(impuls);
+            }
             Boss.SetActive(true);
             if (virtualCamera != null)
             {
@@ -119,6 +133,11 @@ public class mainmainevent : MonoBehaviour
             enemySpawner.SetActive(false);
             
         }
+    }
+
+    public void camarashack(CinemachineImpulseSource impulseSource)
+    {
+        impulseSource.GenerateImpulseWithForce(globalShack);
     }
 
     public void setMusicVolume()
