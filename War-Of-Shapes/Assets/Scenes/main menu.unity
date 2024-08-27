@@ -4064,6 +4064,7 @@ MonoBehaviour:
   enemySpawner: {fileID: 0}
   doneGameT: 0
   tutorialPanal: {fileID: 1589314951}
+  globalShack: 1
 --- !u!1 &709389603
 GameObject:
   m_ObjectHideFlags: 0
@@ -6947,6 +6948,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 8300000, guid: 9b7198a6648c71947bdeb8a9021d6ada, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 687435037}
+        m_TargetAssemblyTypeName: mainmainevent, Assembly-CSharp
+        m_MethodName: loadscene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
