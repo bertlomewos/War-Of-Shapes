@@ -1,15 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f1a838dd8314ba4bb3ad4caca7b1a31, type: 3}
-  m_Name: triplates
-  m_EditorClassIdentifier: 
-  shootingpoint: {fileID: 0}
+version https://git-lfs.github.com/spec/v1
+oid sha256:496ade4f9b452916459a0e02efcecf95229bc0e66a67846a26039aa7b51651fa
+size 427

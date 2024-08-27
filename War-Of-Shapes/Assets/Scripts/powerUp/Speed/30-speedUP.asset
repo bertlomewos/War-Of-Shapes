@@ -1,16 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c412fbe86189a504ea4bfcb6e1ef2d1e, type: 3}
-  m_Name: 30-speedUP
-  m_EditorClassIdentifier: 
-  amount: 20
-  maxspeed: 700
+version https://git-lfs.github.com/spec/v1
+oid sha256:d62246787b9b3e3d0a24637f553339c7fb045b4b90aba8d2f59b2d1e40b8c598
+size 428
