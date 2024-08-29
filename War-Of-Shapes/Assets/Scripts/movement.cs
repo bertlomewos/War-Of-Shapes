@@ -18,19 +18,19 @@ public class movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Set the Rigidbody
+       /* // Set the Rigidbody
         rb = GetComponent<Rigidbody2D>();
 
         screenBound = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        width = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;
+        width = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;*/
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        Vector3 viewpoint = transform.position;
+   /*     Vector3 viewpoint = transform.position;
         viewpoint.x = Mathf.Clamp(viewpoint.x, screenBound.x + width, screenBound.x * -1 -width);
-        transform.position = viewpoint;
+        transform.position = viewpoint;*/
     }
     private void FixedUpdate()
     {
