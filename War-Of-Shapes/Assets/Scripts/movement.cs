@@ -18,11 +18,12 @@ public class movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       /* // Set the Rigidbody
         rb = GetComponent<Rigidbody2D>();
+        /* // Set the Rigidbody
 
-        screenBound = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        width = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;*/
+
+         screenBound = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+         width = transform.GetComponent<SpriteRenderer>().bounds.size.x / 2;*/
     }
 
     // Update is called once per frame
@@ -40,6 +41,6 @@ public class movement : MonoBehaviour
             rb.velocity = direction * speed * Time.fixedDeltaTime;
         }
     }
-    // Access the new input system to know which direction it wants to be pushed
+    
     private void OnMove(InputValue input) => direction = input.Get<Vector2>().normalized;
 }
