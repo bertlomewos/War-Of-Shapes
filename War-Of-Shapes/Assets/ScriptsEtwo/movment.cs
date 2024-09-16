@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class movment : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private float dealtX, dealtY;
+    private Rigidbody2D rb;
+
+    //Usse this for initalization
+    private void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.touchCount > 0) { 
+            Touch touch = Input.GetTouch(0);
+            Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
+
+
+     
+        }
+            
     }
 }
