@@ -20,7 +20,7 @@ public class AoeBullet1 : MonoBehaviour
     private void FixedUpdate()
     {
         // showing to a friend
-        rb.velocity = - transform.up * speed * Time.fixedDeltaTime;
+        rb.linearVelocity = - transform.up * speed * Time.fixedDeltaTime;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

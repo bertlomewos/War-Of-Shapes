@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = playerMovment.targetDir * speed * Time.fixedDeltaTime;
+        rb.linearVelocity = playerMovment.targetDir * speed * Time.fixedDeltaTime;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

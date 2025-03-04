@@ -20,7 +20,7 @@ public class enemyBullet1 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = transform.up * speed * Time.fixedDeltaTime;
+        rb.linearVelocity = transform.up * speed * Time.fixedDeltaTime;
     }
 
 

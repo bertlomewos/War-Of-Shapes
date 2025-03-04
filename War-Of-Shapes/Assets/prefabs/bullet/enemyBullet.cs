@@ -39,7 +39,7 @@ public class enemyBullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = transform.up * speed * Time.fixedDeltaTime;
+        rb.linearVelocity = transform.up * speed * Time.fixedDeltaTime;
     }
     private void rotateTwordsTarget()
     {

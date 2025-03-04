@@ -109,7 +109,7 @@ public class playerMovment : MonoBehaviour
         // Move the player
         if (rb != null)
         {
-            rb.velocity = direction * speed * Time.fixedDeltaTime;
+            rb.linearVelocity = direction * speed * Time.fixedDeltaTime;
         }
     }
 

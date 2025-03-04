@@ -53,11 +53,11 @@ public class longRangedenemy : MonoBehaviour
             // Move forward if not too close to the target
             if (distance > distanceToStop)
             {
-                rb.velocity = transform.up * speed * Time.fixedDeltaTime;
+                rb.linearVelocity = transform.up * speed * Time.fixedDeltaTime;
             }
             else
             {
-                rb.velocity = Vector2.zero;
+                rb.linearVelocity = Vector2.zero;
             }
         }
     }
